@@ -1,0 +1,1567 @@
+2021-06-13 11:44:36,236 INFO 82 channels found for processing.
+2021-06-13 11:44:36,237 INFO Stream # 1: P-1
+2021-06-13 11:44:36,385 INFO units: 150
+2021-06-13 11:44:36,385 INFO layers: 1
+2021-06-13 11:44:36,385 INFO concat: false
+2021-06-13 11:44:36,385 INFO input_scaling: 1
+2021-06-13 11:44:36,386 INFO inter_scaling: 1
+2021-06-13 11:44:36,386 INFO radius: 0.1
+2021-06-13 11:44:36,386 INFO leaky: 0.48
+2021-06-13 11:44:36,386 INFO connectivity_recurrent: 10
+2021-06-13 11:44:36,386 INFO connectivity_input: 10
+2021-06-13 11:44:36,386 INFO connectivity_inter: 10
+2021-06-13 11:44:36,386 INFO return_sequences: false
+2021-06-13 11:47:01,941 INFO validation_loss: 0.12450116872787476
+2021-06-13 11:48:08,921 INFO normalized prediction error: 0.06
+2021-06-13 11:48:09,466 INFO Channel Stats: TP: 1  FP: 0  FN: 2
+2021-06-13 11:48:09,467 INFO Total true positives: 1
+2021-06-13 11:48:09,467 INFO Total false positives: 0
+2021-06-13 11:48:09,467 INFO Total false negatives: 2
+
+2021-06-13 11:48:09,473 INFO Stream # 2: S-1
+2021-06-13 11:48:09,652 INFO units: 150
+2021-06-13 11:48:09,652 INFO layers: 1
+2021-06-13 11:48:09,652 INFO concat: false
+2021-06-13 11:48:09,652 INFO input_scaling: 1
+2021-06-13 11:48:09,652 INFO inter_scaling: 1
+2021-06-13 11:48:09,652 INFO radius: 0.1
+2021-06-13 11:48:09,652 INFO leaky: 0.1
+2021-06-13 11:48:09,652 INFO connectivity_recurrent: 10
+2021-06-13 11:48:09,652 INFO connectivity_input: 10
+2021-06-13 11:48:09,652 INFO connectivity_inter: 10
+2021-06-13 11:48:09,652 INFO return_sequences: false
+2021-06-13 11:49:49,393 INFO validation_loss: 0.20165719091892242
+2021-06-13 11:50:45,589 INFO normalized prediction error: 0.18
+2021-06-13 11:50:46,115 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 11:50:46,115 INFO Total true positives: 2
+2021-06-13 11:50:46,115 INFO Total false positives: 0
+2021-06-13 11:50:46,115 INFO Total false negatives: 2
+
+2021-06-13 11:50:46,119 INFO Stream # 3: E-1
+2021-06-13 11:50:46,309 INFO units: 650
+2021-06-13 11:50:46,309 INFO layers: 1
+2021-06-13 11:50:46,309 INFO concat: false
+2021-06-13 11:50:46,309 INFO input_scaling: 1
+2021-06-13 11:50:46,309 INFO inter_scaling: 1
+2021-06-13 11:50:46,309 INFO radius: 0.62
+2021-06-13 11:50:46,309 INFO leaky: 1.0
+2021-06-13 11:50:46,309 INFO connectivity_recurrent: 10
+2021-06-13 11:50:46,309 INFO connectivity_input: 10
+2021-06-13 11:50:46,310 INFO connectivity_inter: 10
+2021-06-13 11:50:46,310 INFO return_sequences: false
+2021-06-13 11:55:08,221 INFO validation_loss: 0.3662032186985016
+2021-06-13 11:56:15,549 INFO normalized prediction error: 0.03
+2021-06-13 11:56:16,145 INFO Channel Stats: TP: 1  FP: 0  FN: 1
+2021-06-13 11:56:16,145 INFO Total true positives: 3
+2021-06-13 11:56:16,146 INFO Total false positives: 0
+2021-06-13 11:56:16,146 INFO Total false negatives: 3
+
+2021-06-13 11:56:16,149 INFO Stream # 4: E-2
+2021-06-13 11:56:16,344 INFO units: 650
+2021-06-13 11:56:16,344 INFO layers: 1
+2021-06-13 11:56:16,344 INFO concat: false
+2021-06-13 11:56:16,344 INFO input_scaling: 1
+2021-06-13 11:56:16,344 INFO inter_scaling: 1
+2021-06-13 11:56:16,344 INFO radius: 0.1
+2021-06-13 11:56:16,344 INFO leaky: 0.67
+2021-06-13 11:56:16,344 INFO connectivity_recurrent: 10
+2021-06-13 11:56:16,345 INFO connectivity_input: 10
+2021-06-13 11:56:16,345 INFO connectivity_inter: 10
+2021-06-13 11:56:16,345 INFO return_sequences: false
+2021-06-13 11:59:55,507 INFO validation_loss: 0.10990491509437561
+2021-06-13 12:01:04,003 INFO normalized prediction error: 0.03
+2021-06-13 12:01:04,609 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 12:01:04,609 INFO Total true positives: 4
+2021-06-13 12:01:04,609 INFO Total false positives: 0
+2021-06-13 12:01:04,609 INFO Total false negatives: 3
+
+2021-06-13 12:01:04,612 INFO Stream # 5: E-3
+2021-06-13 12:01:04,798 INFO units: 850
+2021-06-13 12:01:04,798 INFO layers: 1
+2021-06-13 12:01:04,798 INFO concat: false
+2021-06-13 12:01:04,798 INFO input_scaling: 1
+2021-06-13 12:01:04,798 INFO inter_scaling: 1
+2021-06-13 12:01:04,798 INFO radius: 0.1
+2021-06-13 12:01:04,798 INFO leaky: 0.95
+2021-06-13 12:01:04,798 INFO connectivity_recurrent: 10
+2021-06-13 12:01:04,798 INFO connectivity_input: 10
+2021-06-13 12:01:04,798 INFO connectivity_inter: 10
+2021-06-13 12:01:04,798 INFO return_sequences: false
+2021-06-13 12:03:16,982 INFO validation_loss: 0.01174550224095583
+2021-06-13 12:04:22,702 INFO normalized prediction error: 0.03
+2021-06-13 12:04:23,096 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 12:04:23,097 INFO Total true positives: 5
+2021-06-13 12:04:23,097 INFO Total false positives: 0
+2021-06-13 12:04:23,097 INFO Total false negatives: 3
+
+2021-06-13 12:04:23,100 INFO Stream # 6: E-4
+2021-06-13 12:04:23,293 INFO units: 850
+2021-06-13 12:04:23,293 INFO layers: 1
+2021-06-13 12:04:23,293 INFO concat: false
+2021-06-13 12:04:23,293 INFO input_scaling: 1
+2021-06-13 12:04:23,293 INFO inter_scaling: 1
+2021-06-13 12:04:23,293 INFO radius: 0.1
+2021-06-13 12:04:23,293 INFO leaky: 0.57
+2021-06-13 12:04:23,294 INFO connectivity_recurrent: 10
+2021-06-13 12:04:23,294 INFO connectivity_input: 10
+2021-06-13 12:04:23,294 INFO connectivity_inter: 10
+2021-06-13 12:04:23,294 INFO return_sequences: false
+2021-06-13 12:06:13,277 INFO validation_loss: 0.0773928165435791
+2021-06-13 12:07:18,294 INFO normalized prediction error: 0.02
+2021-06-13 12:07:19,003 INFO Channel Stats: TP: 1  FP: 2  FN: 0
+2021-06-13 12:07:19,003 INFO Total true positives: 6
+2021-06-13 12:07:19,003 INFO Total false positives: 2
+2021-06-13 12:07:19,003 INFO Total false negatives: 3
+
+2021-06-13 12:07:19,006 INFO Stream # 7: E-5
+2021-06-13 12:07:19,190 INFO units: 650
+2021-06-13 12:07:19,190 INFO layers: 1
+2021-06-13 12:07:19,190 INFO concat: false
+2021-06-13 12:07:19,190 INFO input_scaling: 1
+2021-06-13 12:07:19,190 INFO inter_scaling: 1
+2021-06-13 12:07:19,191 INFO radius: 0.62
+2021-06-13 12:07:19,191 INFO leaky: 1.0
+2021-06-13 12:07:19,191 INFO connectivity_recurrent: 10
+2021-06-13 12:07:19,191 INFO connectivity_input: 10
+2021-06-13 12:07:19,191 INFO connectivity_inter: 10
+2021-06-13 12:07:19,191 INFO return_sequences: false
+2021-06-13 12:11:37,744 INFO validation_loss: 0.38842493295669556
+2021-06-13 12:12:42,480 INFO normalized prediction error: 0.05
+2021-06-13 12:12:42,897 INFO Channel Stats: TP: 1  FP: 1  FN: 0
+2021-06-13 12:12:42,897 INFO Total true positives: 7
+2021-06-13 12:12:42,897 INFO Total false positives: 3
+2021-06-13 12:12:42,897 INFO Total false negatives: 3
+
+2021-06-13 12:12:42,900 INFO Stream # 8: E-6
+2021-06-13 12:12:43,135 INFO units: 750
+2021-06-13 12:12:43,135 INFO layers: 1
+2021-06-13 12:12:43,135 INFO concat: false
+2021-06-13 12:12:43,135 INFO input_scaling: 1
+2021-06-13 12:12:43,136 INFO inter_scaling: 1
+2021-06-13 12:12:43,136 INFO radius: 0.1
+2021-06-13 12:12:43,136 INFO leaky: 0.43
+2021-06-13 12:12:43,136 INFO connectivity_recurrent: 10
+2021-06-13 12:12:43,136 INFO connectivity_input: 10
+2021-06-13 12:12:43,136 INFO connectivity_inter: 10
+2021-06-13 12:12:43,136 INFO return_sequences: false
+2021-06-13 12:13:27,989 INFO validation_loss: 4.437506868271157e-05
+2021-06-13 12:14:32,849 INFO normalized prediction error: 0.00
+2021-06-13 12:14:33,552 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 12:14:33,553 INFO Total true positives: 8
+2021-06-13 12:14:33,553 INFO Total false positives: 3
+2021-06-13 12:14:33,553 INFO Total false negatives: 3
+
+2021-06-13 12:14:33,556 INFO Stream # 9: E-7
+2021-06-13 12:14:33,799 INFO units: 750
+2021-06-13 12:14:33,799 INFO layers: 1
+2021-06-13 12:14:33,799 INFO concat: false
+2021-06-13 12:14:33,799 INFO input_scaling: 1
+2021-06-13 12:14:33,799 INFO inter_scaling: 1
+2021-06-13 12:14:33,799 INFO radius: 0.1
+2021-06-13 12:14:33,799 INFO leaky: 0.38
+2021-06-13 12:14:33,799 INFO connectivity_recurrent: 10
+2021-06-13 12:14:33,799 INFO connectivity_input: 10
+2021-06-13 12:14:33,799 INFO connectivity_inter: 10
+2021-06-13 12:14:33,800 INFO return_sequences: false
+2021-06-13 12:15:23,309 INFO validation_loss: 0.0016961464425548911
+2021-06-13 12:16:29,527 INFO normalized prediction error: 0.02
+2021-06-13 12:16:30,237 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 12:16:30,237 INFO Total true positives: 9
+2021-06-13 12:16:30,237 INFO Total false positives: 3
+2021-06-13 12:16:30,237 INFO Total false negatives: 3
+
+2021-06-13 12:16:30,240 INFO Stream # 10: E-8
+2021-06-13 12:16:30,478 INFO units: 850
+2021-06-13 12:16:30,478 INFO layers: 1
+2021-06-13 12:16:30,478 INFO concat: false
+2021-06-13 12:16:30,478 INFO input_scaling: 1
+2021-06-13 12:16:30,478 INFO inter_scaling: 1
+2021-06-13 12:16:30,478 INFO radius: 0.1
+2021-06-13 12:16:30,478 INFO leaky: 0.67
+2021-06-13 12:16:30,478 INFO connectivity_recurrent: 10
+2021-06-13 12:16:30,478 INFO connectivity_input: 10
+2021-06-13 12:16:30,478 INFO connectivity_inter: 10
+2021-06-13 12:16:30,478 INFO return_sequences: false
+2021-06-13 12:18:14,552 INFO validation_loss: 0.041208721697330475
+2021-06-13 12:19:19,937 INFO normalized prediction error: 0.02
+2021-06-13 12:19:20,621 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 12:19:20,621 INFO Total true positives: 10
+2021-06-13 12:19:20,621 INFO Total false positives: 3
+2021-06-13 12:19:20,621 INFO Total false negatives: 3
+
+2021-06-13 12:19:20,624 INFO Stream # 11: E-9
+2021-06-13 12:19:20,865 INFO units: 650
+2021-06-13 12:19:20,865 INFO layers: 1
+2021-06-13 12:19:20,866 INFO concat: false
+2021-06-13 12:19:20,866 INFO input_scaling: 1
+2021-06-13 12:19:20,866 INFO inter_scaling: 1
+2021-06-13 12:19:20,866 INFO radius: 0.1
+2021-06-13 12:19:20,866 INFO leaky: 0.72
+2021-06-13 12:19:20,866 INFO connectivity_recurrent: 10
+2021-06-13 12:19:20,866 INFO connectivity_input: 10
+2021-06-13 12:19:20,866 INFO connectivity_inter: 10
+2021-06-13 12:19:20,866 INFO return_sequences: false
+2021-06-13 12:22:53,071 INFO validation_loss: 0.02252907119691372
+2021-06-13 12:23:58,040 INFO normalized prediction error: 0.02
+2021-06-13 12:23:58,462 INFO Channel Stats: TP: 0  FP: 0  FN: 1
+2021-06-13 12:23:58,462 INFO Total true positives: 10
+2021-06-13 12:23:58,462 INFO Total false positives: 3
+2021-06-13 12:23:58,462 INFO Total false negatives: 4
+
+2021-06-13 12:23:58,466 INFO Stream # 12: E-10
+2021-06-13 12:23:58,698 INFO units: 650
+2021-06-13 12:23:58,698 INFO layers: 1
+2021-06-13 12:23:58,698 INFO concat: false
+2021-06-13 12:23:58,698 INFO input_scaling: 1
+2021-06-13 12:23:58,698 INFO inter_scaling: 1
+2021-06-13 12:23:58,698 INFO radius: 0.62
+2021-06-13 12:23:58,698 INFO leaky: 1.0
+2021-06-13 12:23:58,698 INFO connectivity_recurrent: 10
+2021-06-13 12:23:58,698 INFO connectivity_input: 10
+2021-06-13 12:23:58,698 INFO connectivity_inter: 10
+2021-06-13 12:23:58,698 INFO return_sequences: false
+2021-06-13 12:27:45,657 INFO validation_loss: 0.3437183201313019
+2021-06-13 12:28:53,302 INFO normalized prediction error: 0.04
+2021-06-13 12:28:53,961 INFO Channel Stats: TP: 1  FP: 0  FN: 1
+2021-06-13 12:28:53,961 INFO Total true positives: 11
+2021-06-13 12:28:53,961 INFO Total false positives: 3
+2021-06-13 12:28:53,961 INFO Total false negatives: 5
+
+2021-06-13 12:28:53,965 INFO Stream # 13: E-11
+2021-06-13 12:28:54,220 INFO units: 650
+2021-06-13 12:28:54,220 INFO layers: 1
+2021-06-13 12:28:54,220 INFO concat: false
+2021-06-13 12:28:54,220 INFO input_scaling: 1
+2021-06-13 12:28:54,220 INFO inter_scaling: 1
+2021-06-13 12:28:54,220 INFO radius: 0.62
+2021-06-13 12:28:54,220 INFO leaky: 1.0
+2021-06-13 12:28:54,220 INFO connectivity_recurrent: 10
+2021-06-13 12:28:54,220 INFO connectivity_input: 10
+2021-06-13 12:28:54,221 INFO connectivity_inter: 10
+2021-06-13 12:28:54,221 INFO return_sequences: false
+2021-06-13 12:32:33,391 INFO validation_loss: 0.32968902587890625
+2021-06-13 12:33:41,173 INFO normalized prediction error: 0.03
+2021-06-13 12:33:41,819 INFO Channel Stats: TP: 1  FP: 0  FN: 1
+2021-06-13 12:33:41,819 INFO Total true positives: 12
+2021-06-13 12:33:41,819 INFO Total false positives: 3
+2021-06-13 12:33:41,819 INFO Total false negatives: 6
+
+2021-06-13 12:33:41,823 INFO Stream # 14: E-12
+2021-06-13 12:33:42,055 INFO units: 650
+2021-06-13 12:33:42,056 INFO layers: 1
+2021-06-13 12:33:42,056 INFO concat: false
+2021-06-13 12:33:42,056 INFO input_scaling: 1
+2021-06-13 12:33:42,056 INFO inter_scaling: 1
+2021-06-13 12:33:42,056 INFO radius: 0.62
+2021-06-13 12:33:42,056 INFO leaky: 1.0
+2021-06-13 12:33:42,056 INFO connectivity_recurrent: 10
+2021-06-13 12:33:42,056 INFO connectivity_input: 10
+2021-06-13 12:33:42,056 INFO connectivity_inter: 10
+2021-06-13 12:33:42,056 INFO return_sequences: false
+2021-06-13 12:37:30,818 INFO validation_loss: 0.34161949157714844
+2021-06-13 12:38:37,550 INFO normalized prediction error: 0.03
+2021-06-13 12:38:38,195 INFO Channel Stats: TP: 1  FP: 1  FN: 1
+2021-06-13 12:38:38,195 INFO Total true positives: 13
+2021-06-13 12:38:38,195 INFO Total false positives: 4
+2021-06-13 12:38:38,195 INFO Total false negatives: 7
+
+2021-06-13 12:38:38,199 INFO Stream # 15: E-13
+2021-06-13 12:38:38,436 INFO units: 650
+2021-06-13 12:38:38,437 INFO layers: 1
+2021-06-13 12:38:38,437 INFO concat: false
+2021-06-13 12:38:38,437 INFO input_scaling: 1
+2021-06-13 12:38:38,437 INFO inter_scaling: 1
+2021-06-13 12:38:38,437 INFO radius: 0.57
+2021-06-13 12:38:38,437 INFO leaky: 0.62
+2021-06-13 12:38:38,437 INFO connectivity_recurrent: 10
+2021-06-13 12:38:38,437 INFO connectivity_input: 10
+2021-06-13 12:38:38,437 INFO connectivity_inter: 10
+2021-06-13 12:38:38,437 INFO return_sequences: false
+2021-06-13 12:42:55,677 INFO validation_loss: 0.13627023994922638
+2021-06-13 12:44:05,028 INFO normalized prediction error: 0.04
+2021-06-13 12:44:05,561 INFO Channel Stats: TP: 0  FP: 0  FN: 3
+2021-06-13 12:44:05,561 INFO Total true positives: 13
+2021-06-13 12:44:05,561 INFO Total false positives: 4
+2021-06-13 12:44:05,562 INFO Total false negatives: 10
+
+2021-06-13 12:44:05,566 INFO Stream # 16: A-1
+2021-06-13 12:44:05,838 INFO units: 750
+2021-06-13 12:44:05,838 INFO layers: 1
+2021-06-13 12:44:05,838 INFO concat: false
+2021-06-13 12:44:05,838 INFO input_scaling: 1
+2021-06-13 12:44:05,838 INFO inter_scaling: 1
+2021-06-13 12:44:05,838 INFO radius: 0.1
+2021-06-13 12:44:05,838 INFO leaky: 0.43
+2021-06-13 12:44:05,839 INFO connectivity_recurrent: 10
+2021-06-13 12:44:05,839 INFO connectivity_input: 10
+2021-06-13 12:44:05,839 INFO connectivity_inter: 10
+2021-06-13 12:44:05,839 INFO return_sequences: false
+2021-06-13 12:45:00,137 INFO validation_loss: 4.297691702959128e-05
+2021-06-13 12:46:09,696 INFO normalized prediction error: 0.00
+2021-06-13 12:46:10,377 INFO Channel Stats: TP: 0  FP: 0  FN: 1
+2021-06-13 12:46:10,377 INFO Total true positives: 13
+2021-06-13 12:46:10,377 INFO Total false positives: 4
+2021-06-13 12:46:10,377 INFO Total false negatives: 11
+
+2021-06-13 12:46:10,381 INFO Stream # 17: D-1
+2021-06-13 12:46:10,640 INFO units: 550
+2021-06-13 12:46:10,640 INFO layers: 1
+2021-06-13 12:46:10,640 INFO concat: false
+2021-06-13 12:46:10,640 INFO input_scaling: 1
+2021-06-13 12:46:10,640 INFO inter_scaling: 1
+2021-06-13 12:46:10,640 INFO radius: 0.1
+2021-06-13 12:46:10,640 INFO leaky: 0.29
+2021-06-13 12:46:10,640 INFO connectivity_recurrent: 10
+2021-06-13 12:46:10,640 INFO connectivity_input: 10
+2021-06-13 12:46:10,640 INFO connectivity_inter: 10
+2021-06-13 12:46:10,640 INFO return_sequences: false
+2021-06-13 12:46:57,091 INFO validation_loss: 0.003003685036674142
+2021-06-13 12:48:04,649 INFO normalized prediction error: 0.19
+2021-06-13 12:48:05,170 INFO Channel Stats: TP: 1  FP: 1  FN: 0
+2021-06-13 12:48:05,171 INFO Total true positives: 14
+2021-06-13 12:48:05,171 INFO Total false positives: 5
+2021-06-13 12:48:05,171 INFO Total false negatives: 11
+
+2021-06-13 12:48:05,175 INFO Stream # 18: P-2
+2021-06-13 12:48:05,437 INFO units: 850
+2021-06-13 12:48:05,437 INFO layers: 1
+2021-06-13 12:48:05,437 INFO concat: false
+2021-06-13 12:48:05,437 INFO input_scaling: 1
+2021-06-13 12:48:05,437 INFO inter_scaling: 1
+2021-06-13 12:48:05,437 INFO radius: 0.1
+2021-06-13 12:48:05,437 INFO leaky: 0.34
+2021-06-13 12:48:05,437 INFO connectivity_recurrent: 10
+2021-06-13 12:48:05,437 INFO connectivity_input: 10
+2021-06-13 12:48:05,437 INFO connectivity_inter: 10
+2021-06-13 12:48:05,438 INFO return_sequences: false
+2021-06-13 12:48:57,478 INFO validation_loss: 0.0008500174735672772
+2021-06-13 12:50:02,561 INFO normalized prediction error: 0.06
+2021-06-13 12:50:02,993 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 12:50:02,993 INFO Total true positives: 15
+2021-06-13 12:50:02,993 INFO Total false positives: 5
+2021-06-13 12:50:02,993 INFO Total false negatives: 11
+
+2021-06-13 12:50:02,998 INFO Stream # 19: P-3
+2021-06-13 12:50:03,250 INFO units: 850
+2021-06-13 12:50:03,250 INFO layers: 1
+2021-06-13 12:50:03,250 INFO concat: false
+2021-06-13 12:50:03,250 INFO input_scaling: 1
+2021-06-13 12:50:03,250 INFO inter_scaling: 1
+2021-06-13 12:50:03,250 INFO radius: 0.19
+2021-06-13 12:50:03,250 INFO leaky: 0.62
+2021-06-13 12:50:03,250 INFO connectivity_recurrent: 10
+2021-06-13 12:50:03,251 INFO connectivity_input: 10
+2021-06-13 12:50:03,251 INFO connectivity_inter: 10
+2021-06-13 12:50:03,251 INFO return_sequences: false
+2021-06-13 12:50:56,639 INFO validation_loss: 0.020109020173549652
+2021-06-13 12:52:04,181 INFO normalized prediction error: 0.03
+2021-06-13 12:52:04,746 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 12:52:04,746 INFO Total true positives: 16
+2021-06-13 12:52:04,747 INFO Total false positives: 5
+2021-06-13 12:52:04,747 INFO Total false negatives: 11
+
+2021-06-13 12:52:04,751 INFO Stream # 20: D-2
+2021-06-13 12:52:05,026 INFO units: 950
+2021-06-13 12:52:05,026 INFO layers: 1
+2021-06-13 12:52:05,026 INFO concat: false
+2021-06-13 12:52:05,026 INFO input_scaling: 1
+2021-06-13 12:52:05,026 INFO inter_scaling: 1
+2021-06-13 12:52:05,026 INFO radius: 0.1
+2021-06-13 12:52:05,026 INFO leaky: 0.38
+2021-06-13 12:52:05,026 INFO connectivity_recurrent: 10
+2021-06-13 12:52:05,026 INFO connectivity_input: 10
+2021-06-13 12:52:05,026 INFO connectivity_inter: 10
+2021-06-13 12:52:05,026 INFO return_sequences: false
+2021-06-13 12:52:51,312 INFO validation_loss: 2.278947431477718e-05
+2021-06-13 12:54:00,018 INFO normalized prediction error: 0.46
+2021-06-13 12:54:00,683 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 12:54:00,684 INFO Total true positives: 17
+2021-06-13 12:54:00,684 INFO Total false positives: 5
+2021-06-13 12:54:00,684 INFO Total false negatives: 11
+
+2021-06-13 12:54:00,688 INFO Stream # 21: D-3
+2021-06-13 12:54:00,930 INFO units: 950
+2021-06-13 12:54:00,930 INFO layers: 1
+2021-06-13 12:54:00,930 INFO concat: false
+2021-06-13 12:54:00,930 INFO input_scaling: 1
+2021-06-13 12:54:00,930 INFO inter_scaling: 1
+2021-06-13 12:54:00,930 INFO radius: 0.24
+2021-06-13 12:54:00,930 INFO leaky: 0.34
+2021-06-13 12:54:00,931 INFO connectivity_recurrent: 10
+2021-06-13 12:54:00,931 INFO connectivity_input: 10
+2021-06-13 12:54:00,931 INFO connectivity_inter: 10
+2021-06-13 12:54:00,931 INFO return_sequences: false
+2021-06-13 12:54:47,400 INFO validation_loss: 0.0001027258622343652
+2021-06-13 12:55:55,804 INFO normalized prediction error: 0.22
+2021-06-13 12:55:56,216 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 12:55:56,217 INFO Total true positives: 18
+2021-06-13 12:55:56,217 INFO Total false positives: 5
+2021-06-13 12:55:56,217 INFO Total false negatives: 11
+
+2021-06-13 12:55:56,221 INFO Stream # 22: D-4
+2021-06-13 12:55:56,456 INFO units: 850
+2021-06-13 12:55:56,457 INFO layers: 1
+2021-06-13 12:55:56,457 INFO concat: false
+2021-06-13 12:55:56,457 INFO input_scaling: 1
+2021-06-13 12:55:56,457 INFO inter_scaling: 1
+2021-06-13 12:55:56,457 INFO radius: 0.1
+2021-06-13 12:55:56,457 INFO leaky: 0.34
+2021-06-13 12:55:56,457 INFO connectivity_recurrent: 10
+2021-06-13 12:55:56,457 INFO connectivity_input: 10
+2021-06-13 12:55:56,457 INFO connectivity_inter: 10
+2021-06-13 12:55:56,457 INFO return_sequences: false
+2021-06-13 12:56:50,374 INFO validation_loss: 0.0001317809656029567
+2021-06-13 12:57:57,623 INFO normalized prediction error: 0.20
+2021-06-13 12:57:58,040 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 12:57:58,040 INFO Total true positives: 19
+2021-06-13 12:57:58,040 INFO Total false positives: 5
+2021-06-13 12:57:58,041 INFO Total false negatives: 11
+
+2021-06-13 12:57:58,045 INFO Stream # 23: A-2
+2021-06-13 12:57:58,293 INFO units: 450
+2021-06-13 12:57:58,294 INFO layers: 1
+2021-06-13 12:57:58,294 INFO concat: false
+2021-06-13 12:57:58,294 INFO input_scaling: 1
+2021-06-13 12:57:58,294 INFO inter_scaling: 1
+2021-06-13 12:57:58,294 INFO radius: 0.57
+2021-06-13 12:57:58,294 INFO leaky: 0.57
+2021-06-13 12:57:58,294 INFO connectivity_recurrent: 10
+2021-06-13 12:57:58,294 INFO connectivity_input: 10
+2021-06-13 12:57:58,294 INFO connectivity_inter: 10
+2021-06-13 12:57:58,294 INFO return_sequences: false
+2021-06-13 13:01:20,280 INFO validation_loss: 0.100825235247612
+2021-06-13 13:02:25,261 INFO normalized prediction error: 0.06
+2021-06-13 13:02:25,883 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 13:02:25,883 INFO Total true positives: 20
+2021-06-13 13:02:25,883 INFO Total false positives: 5
+2021-06-13 13:02:25,884 INFO Total false negatives: 11
+
+2021-06-13 13:02:25,889 INFO Stream # 24: A-3
+2021-06-13 13:02:26,161 INFO units: 450
+2021-06-13 13:02:26,161 INFO layers: 1
+2021-06-13 13:02:26,162 INFO concat: false
+2021-06-13 13:02:26,162 INFO input_scaling: 1
+2021-06-13 13:02:26,162 INFO inter_scaling: 1
+2021-06-13 13:02:26,162 INFO radius: 0.53
+2021-06-13 13:02:26,162 INFO leaky: 0.57
+2021-06-13 13:02:26,162 INFO connectivity_recurrent: 10
+2021-06-13 13:02:26,162 INFO connectivity_input: 10
+2021-06-13 13:02:26,162 INFO connectivity_inter: 10
+2021-06-13 13:02:26,162 INFO return_sequences: false
+2021-06-13 13:04:01,137 INFO validation_loss: 0.054835185408592224
+2021-06-13 13:05:07,853 INFO normalized prediction error: 0.04
+2021-06-13 13:05:08,483 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 13:05:08,483 INFO Total true positives: 21
+2021-06-13 13:05:08,483 INFO Total false positives: 5
+2021-06-13 13:05:08,483 INFO Total false negatives: 11
+
+2021-06-13 13:05:08,489 INFO Stream # 25: A-4
+2021-06-13 13:05:08,700 INFO units: 850
+2021-06-13 13:05:08,701 INFO layers: 1
+2021-06-13 13:05:08,701 INFO concat: false
+2021-06-13 13:05:08,701 INFO input_scaling: 1
+2021-06-13 13:05:08,701 INFO inter_scaling: 1
+2021-06-13 13:05:08,701 INFO radius: 0.19
+2021-06-13 13:05:08,701 INFO leaky: 0.53
+2021-06-13 13:05:08,701 INFO connectivity_recurrent: 10
+2021-06-13 13:05:08,701 INFO connectivity_input: 10
+2021-06-13 13:05:08,701 INFO connectivity_inter: 10
+2021-06-13 13:05:08,701 INFO return_sequences: false
+2021-06-13 13:06:26,271 INFO validation_loss: 0.04642464593052864
+2021-06-13 13:07:32,522 INFO normalized prediction error: 0.07
+2021-06-13 13:07:33,181 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 13:07:33,181 INFO Total true positives: 22
+2021-06-13 13:07:33,181 INFO Total false positives: 5
+2021-06-13 13:07:33,181 INFO Total false negatives: 11
+
+2021-06-13 13:07:33,185 INFO Stream # 26: G-1
+2021-06-13 13:07:33,465 INFO units: 650
+2021-06-13 13:07:33,465 INFO layers: 1
+2021-06-13 13:07:33,465 INFO concat: false
+2021-06-13 13:07:33,465 INFO input_scaling: 1
+2021-06-13 13:07:33,465 INFO inter_scaling: 1
+2021-06-13 13:07:33,465 INFO radius: 1.0
+2021-06-13 13:07:33,466 INFO leaky: 0.53
+2021-06-13 13:07:33,466 INFO connectivity_recurrent: 10
+2021-06-13 13:07:33,466 INFO connectivity_input: 10
+2021-06-13 13:07:33,466 INFO connectivity_inter: 10
+2021-06-13 13:07:33,466 INFO return_sequences: false
+2021-06-13 13:10:40,642 INFO validation_loss: 0.05543307587504387
+2021-06-13 13:11:51,844 INFO normalized prediction error: 0.06
+2021-06-13 13:11:52,297 INFO Channel Stats: TP: 0  FP: 0  FN: 1
+2021-06-13 13:11:52,297 INFO Total true positives: 22
+2021-06-13 13:11:52,297 INFO Total false positives: 5
+2021-06-13 13:11:52,297 INFO Total false negatives: 12
+
+2021-06-13 13:11:52,302 INFO Stream # 27: G-2
+2021-06-13 13:11:52,533 INFO units: 950
+2021-06-13 13:11:52,533 INFO layers: 1
+2021-06-13 13:11:52,533 INFO concat: false
+2021-06-13 13:11:52,533 INFO input_scaling: 1
+2021-06-13 13:11:52,533 INFO inter_scaling: 1
+2021-06-13 13:11:52,533 INFO radius: 0.1
+2021-06-13 13:11:52,533 INFO leaky: 0.43
+2021-06-13 13:11:52,534 INFO connectivity_recurrent: 10
+2021-06-13 13:11:52,534 INFO connectivity_input: 10
+2021-06-13 13:11:52,534 INFO connectivity_inter: 10
+2021-06-13 13:11:52,534 INFO return_sequences: false
+2021-06-13 13:12:37,851 INFO validation_loss: 4.778358561452478e-05
+2021-06-13 13:13:37,280 INFO normalized prediction error: 0.00
+2021-06-13 13:13:37,911 INFO Channel Stats: TP: 0  FP: 0  FN: 1
+2021-06-13 13:13:37,911 INFO Total true positives: 22
+2021-06-13 13:13:37,911 INFO Total false positives: 5
+2021-06-13 13:13:37,911 INFO Total false negatives: 13
+
+2021-06-13 13:13:37,916 INFO Stream # 28: D-5
+2021-06-13 13:13:38,146 INFO units: 750
+2021-06-13 13:13:38,146 INFO layers: 1
+2021-06-13 13:13:38,146 INFO concat: false
+2021-06-13 13:13:38,146 INFO input_scaling: 1
+2021-06-13 13:13:38,146 INFO inter_scaling: 1
+2021-06-13 13:13:38,146 INFO radius: 0.1
+2021-06-13 13:13:38,146 INFO leaky: 0.48
+2021-06-13 13:13:38,146 INFO connectivity_recurrent: 10
+2021-06-13 13:13:38,146 INFO connectivity_input: 10
+2021-06-13 13:13:38,146 INFO connectivity_inter: 10
+2021-06-13 13:13:38,146 INFO return_sequences: false
+2021-06-13 13:14:19,565 INFO validation_loss: 6.246160774026066e-05
+2021-06-13 13:15:21,776 INFO normalized prediction error: 1.09
+2021-06-13 13:15:22,485 INFO Channel Stats: TP: 0  FP: 0  FN: 1
+2021-06-13 13:15:22,485 INFO Total true positives: 22
+2021-06-13 13:15:22,485 INFO Total false positives: 5
+2021-06-13 13:15:22,485 INFO Total false negatives: 14
+
+2021-06-13 13:15:22,490 INFO Stream # 29: D-6
+2021-06-13 13:15:22,700 INFO units: 850
+2021-06-13 13:15:22,700 INFO layers: 1
+2021-06-13 13:15:22,700 INFO concat: false
+2021-06-13 13:15:22,700 INFO input_scaling: 1
+2021-06-13 13:15:22,700 INFO inter_scaling: 1
+2021-06-13 13:15:22,700 INFO radius: 0.24
+2021-06-13 13:15:22,700 INFO leaky: 0.67
+2021-06-13 13:15:22,700 INFO connectivity_recurrent: 10
+2021-06-13 13:15:22,700 INFO connectivity_input: 10
+2021-06-13 13:15:22,700 INFO connectivity_inter: 10
+2021-06-13 13:15:22,700 INFO return_sequences: false
+2021-06-13 13:16:53,449 INFO validation_loss: 0.036797549575567245
+2021-06-13 13:17:57,893 INFO normalized prediction error: 0.05
+2021-06-13 13:17:58,546 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 13:17:58,547 INFO Total true positives: 23
+2021-06-13 13:17:58,547 INFO Total false positives: 5
+2021-06-13 13:17:58,547 INFO Total false negatives: 14
+
+2021-06-13 13:17:58,551 INFO Stream # 30: D-7
+2021-06-13 13:17:58,768 INFO units: 950
+2021-06-13 13:17:58,768 INFO layers: 1
+2021-06-13 13:17:58,768 INFO concat: false
+2021-06-13 13:17:58,768 INFO input_scaling: 1
+2021-06-13 13:17:58,768 INFO inter_scaling: 1
+2021-06-13 13:17:58,769 INFO radius: 0.1
+2021-06-13 13:17:58,769 INFO leaky: 0.38
+2021-06-13 13:17:58,769 INFO connectivity_recurrent: 10
+2021-06-13 13:17:58,769 INFO connectivity_input: 10
+2021-06-13 13:17:58,769 INFO connectivity_inter: 10
+2021-06-13 13:17:58,769 INFO return_sequences: false
+2021-06-13 13:18:47,402 INFO validation_loss: 4.63409123767633e-05
+2021-06-13 13:19:49,322 INFO normalized prediction error: 0.19
+2021-06-13 13:19:49,774 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 13:19:49,774 INFO Total true positives: 24
+2021-06-13 13:19:49,774 INFO Total false positives: 5
+2021-06-13 13:19:49,774 INFO Total false negatives: 14
+
+2021-06-13 13:19:49,779 INFO Stream # 31: F-1
+2021-06-13 13:19:50,045 INFO units: 150
+2021-06-13 13:19:50,045 INFO layers: 1
+2021-06-13 13:19:50,045 INFO concat: false
+2021-06-13 13:19:50,045 INFO input_scaling: 1
+2021-06-13 13:19:50,045 INFO inter_scaling: 1
+2021-06-13 13:19:50,045 INFO radius: 0.1
+2021-06-13 13:19:50,046 INFO leaky: 0.1
+2021-06-13 13:19:50,046 INFO connectivity_recurrent: 10
+2021-06-13 13:19:50,046 INFO connectivity_input: 10
+2021-06-13 13:19:50,046 INFO connectivity_inter: 10
+2021-06-13 13:19:50,046 INFO return_sequences: false
+2021-06-13 13:20:35,593 INFO validation_loss: 0.04878360405564308
+2021-06-13 13:21:41,191 INFO normalized prediction error: 0.07
+2021-06-13 13:21:41,730 INFO Channel Stats: TP: 0  FP: 1  FN: 1
+2021-06-13 13:21:41,730 INFO Total true positives: 24
+2021-06-13 13:21:41,730 INFO Total false positives: 6
+2021-06-13 13:21:41,730 INFO Total false negatives: 15
+
+2021-06-13 13:21:41,736 INFO Stream # 32: P-4
+2021-06-13 13:21:41,970 INFO units: 950
+2021-06-13 13:21:41,970 INFO layers: 1
+2021-06-13 13:21:41,970 INFO concat: false
+2021-06-13 13:21:41,970 INFO input_scaling: 1
+2021-06-13 13:21:41,970 INFO inter_scaling: 1
+2021-06-13 13:21:41,970 INFO radius: 0.1
+2021-06-13 13:21:41,971 INFO leaky: 0.38
+2021-06-13 13:21:41,971 INFO connectivity_recurrent: 10
+2021-06-13 13:21:41,971 INFO connectivity_input: 10
+2021-06-13 13:21:41,971 INFO connectivity_inter: 10
+2021-06-13 13:21:41,971 INFO return_sequences: false
+2021-06-13 13:22:29,455 INFO validation_loss: 4.0801540308166295e-05
+2021-06-13 13:23:29,520 INFO normalized prediction error: 0.00
+2021-06-13 13:23:30,382 INFO Channel Stats: TP: 3  FP: 0  FN: 0
+2021-06-13 13:23:30,382 INFO Total true positives: 27
+2021-06-13 13:23:30,382 INFO Total false positives: 6
+2021-06-13 13:23:30,382 INFO Total false negatives: 15
+
+2021-06-13 13:23:30,386 INFO Stream # 33: G-3
+2021-06-13 13:23:30,657 INFO units: 450
+2021-06-13 13:23:30,657 INFO layers: 1
+2021-06-13 13:23:30,657 INFO concat: false
+2021-06-13 13:23:30,657 INFO input_scaling: 1
+2021-06-13 13:23:30,657 INFO inter_scaling: 1
+2021-06-13 13:23:30,658 INFO radius: 0.1
+2021-06-13 13:23:30,658 INFO leaky: 0.53
+2021-06-13 13:23:30,658 INFO connectivity_recurrent: 10
+2021-06-13 13:23:30,658 INFO connectivity_input: 10
+2021-06-13 13:23:30,658 INFO connectivity_inter: 10
+2021-06-13 13:23:30,658 INFO return_sequences: false
+2021-06-13 13:25:00,304 INFO validation_loss: 0.02124554105103016
+2021-06-13 13:26:02,304 INFO normalized prediction error: 0.00
+2021-06-13 13:26:02,980 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 13:26:02,980 INFO Total true positives: 28
+2021-06-13 13:26:02,980 INFO Total false positives: 6
+2021-06-13 13:26:02,980 INFO Total false negatives: 15
+
+2021-06-13 13:26:02,985 INFO Stream # 34: T-1
+2021-06-13 13:26:03,201 INFO units: 450
+2021-06-13 13:26:03,202 INFO layers: 1
+2021-06-13 13:26:03,202 INFO concat: false
+2021-06-13 13:26:03,202 INFO input_scaling: 1
+2021-06-13 13:26:03,202 INFO inter_scaling: 1
+2021-06-13 13:26:03,202 INFO radius: 0.57
+2021-06-13 13:26:03,202 INFO leaky: 1.0
+2021-06-13 13:26:03,202 INFO connectivity_recurrent: 10
+2021-06-13 13:26:03,202 INFO connectivity_input: 10
+2021-06-13 13:26:03,202 INFO connectivity_inter: 10
+2021-06-13 13:26:03,202 INFO return_sequences: false
+2021-06-13 13:30:25,490 INFO validation_loss: 0.11390828341245651
+2021-06-13 13:31:33,598 INFO normalized prediction error: 0.02
+2021-06-13 13:31:33,986 INFO Channel Stats: TP: 1  FP: 0  FN: 1
+2021-06-13 13:31:33,987 INFO Total true positives: 29
+2021-06-13 13:31:33,987 INFO Total false positives: 6
+2021-06-13 13:31:33,987 INFO Total false negatives: 16
+
+2021-06-13 13:31:33,991 INFO Stream # 35: T-2
+2021-06-13 13:31:34,248 INFO units: 450
+2021-06-13 13:31:34,248 INFO layers: 1
+2021-06-13 13:31:34,248 INFO concat: false
+2021-06-13 13:31:34,248 INFO input_scaling: 1
+2021-06-13 13:31:34,248 INFO inter_scaling: 1
+2021-06-13 13:31:34,248 INFO radius: 0.57
+2021-06-13 13:31:34,249 INFO leaky: 1.0
+2021-06-13 13:31:34,249 INFO connectivity_recurrent: 10
+2021-06-13 13:31:34,249 INFO connectivity_input: 10
+2021-06-13 13:31:34,249 INFO connectivity_inter: 10
+2021-06-13 13:31:34,249 INFO return_sequences: false
+2021-06-13 13:35:59,336 INFO validation_loss: 0.1072336882352829
+2021-06-13 13:37:07,607 INFO normalized prediction error: 0.04
+2021-06-13 13:37:08,074 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 13:37:08,074 INFO Total true positives: 30
+2021-06-13 13:37:08,074 INFO Total false positives: 6
+2021-06-13 13:37:08,074 INFO Total false negatives: 16
+
+2021-06-13 13:37:08,079 INFO Stream # 36: D-8
+2021-06-13 13:37:08,315 INFO units: 450
+2021-06-13 13:37:08,315 INFO layers: 1
+2021-06-13 13:37:08,315 INFO concat: false
+2021-06-13 13:37:08,315 INFO input_scaling: 1
+2021-06-13 13:37:08,315 INFO inter_scaling: 1
+2021-06-13 13:37:08,315 INFO radius: 0.48
+2021-06-13 13:37:08,315 INFO leaky: 0.53
+2021-06-13 13:37:08,315 INFO connectivity_recurrent: 10
+2021-06-13 13:37:08,315 INFO connectivity_input: 10
+2021-06-13 13:37:08,315 INFO connectivity_inter: 10
+2021-06-13 13:37:08,315 INFO return_sequences: false
+2021-06-13 13:37:50,452 INFO validation_loss: 8.526043529855087e-05
+2021-06-13 13:38:51,303 INFO normalized prediction error: 0.00
+2021-06-13 13:38:51,977 INFO Channel Stats: TP: 0  FP: 0  FN: 1
+2021-06-13 13:38:51,977 INFO Total true positives: 30
+2021-06-13 13:38:51,977 INFO Total false positives: 6
+2021-06-13 13:38:51,977 INFO Total false negatives: 17
+
+2021-06-13 13:38:51,981 INFO Stream # 37: D-9
+2021-06-13 13:38:52,190 INFO units: 450
+2021-06-13 13:38:52,190 INFO layers: 1
+2021-06-13 13:38:52,190 INFO concat: false
+2021-06-13 13:38:52,191 INFO input_scaling: 1
+2021-06-13 13:38:52,191 INFO inter_scaling: 1
+2021-06-13 13:38:52,191 INFO radius: 0.19
+2021-06-13 13:38:52,191 INFO leaky: 0.53
+2021-06-13 13:38:52,191 INFO connectivity_recurrent: 10
+2021-06-13 13:38:52,191 INFO connectivity_input: 10
+2021-06-13 13:38:52,191 INFO connectivity_inter: 10
+2021-06-13 13:38:52,191 INFO return_sequences: false
+2021-06-13 13:39:34,646 INFO validation_loss: 6.903936446178705e-05
+2021-06-13 13:40:32,922 INFO normalized prediction error: 0.10
+2021-06-13 13:40:33,349 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 13:40:33,349 INFO Total true positives: 31
+2021-06-13 13:40:33,349 INFO Total false positives: 6
+2021-06-13 13:40:33,349 INFO Total false negatives: 17
+
+2021-06-13 13:40:33,354 INFO Stream # 38: F-2
+2021-06-13 13:40:33,578 INFO units: 250
+2021-06-13 13:40:33,579 INFO layers: 1
+2021-06-13 13:40:33,579 INFO concat: false
+2021-06-13 13:40:33,579 INFO input_scaling: 1
+2021-06-13 13:40:33,579 INFO inter_scaling: 1
+2021-06-13 13:40:33,579 INFO radius: 0.1
+2021-06-13 13:40:33,579 INFO leaky: 0.24
+2021-06-13 13:40:33,579 INFO connectivity_recurrent: 10
+2021-06-13 13:40:33,579 INFO connectivity_input: 10
+2021-06-13 13:40:33,579 INFO connectivity_inter: 10
+2021-06-13 13:40:33,579 INFO return_sequences: false
+2021-06-13 13:41:18,436 INFO validation_loss: 0.02992045320570469
+2021-06-13 13:42:24,877 INFO normalized prediction error: 0.04
+2021-06-13 13:42:25,480 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 13:42:25,480 INFO Total true positives: 32
+2021-06-13 13:42:25,480 INFO Total false positives: 6
+2021-06-13 13:42:25,481 INFO Total false negatives: 17
+
+2021-06-13 13:42:25,485 INFO Stream # 39: G-4
+2021-06-13 13:42:25,728 INFO units: 850
+2021-06-13 13:42:25,728 INFO layers: 1
+2021-06-13 13:42:25,728 INFO concat: false
+2021-06-13 13:42:25,728 INFO input_scaling: 1
+2021-06-13 13:42:25,728 INFO inter_scaling: 1
+2021-06-13 13:42:25,728 INFO radius: 0.1
+2021-06-13 13:42:25,728 INFO leaky: 1.0
+2021-06-13 13:42:25,729 INFO connectivity_recurrent: 10
+2021-06-13 13:42:25,729 INFO connectivity_input: 10
+2021-06-13 13:42:25,729 INFO connectivity_inter: 10
+2021-06-13 13:42:25,729 INFO return_sequences: false
+2021-06-13 13:43:12,270 INFO validation_loss: 0.00013889395631849766
+2021-06-13 13:44:12,351 INFO normalized prediction error: 0.00
+2021-06-13 13:44:12,902 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 13:44:12,902 INFO Total true positives: 33
+2021-06-13 13:44:12,902 INFO Total false positives: 6
+2021-06-13 13:44:12,902 INFO Total false negatives: 17
+
+2021-06-13 13:44:12,907 INFO Stream # 40: T-3
+2021-06-13 13:44:13,167 INFO units: 150
+2021-06-13 13:44:13,167 INFO layers: 1
+2021-06-13 13:44:13,167 INFO concat: false
+2021-06-13 13:44:13,167 INFO input_scaling: 1
+2021-06-13 13:44:13,167 INFO inter_scaling: 1
+2021-06-13 13:44:13,168 INFO radius: 0.1
+2021-06-13 13:44:13,168 INFO leaky: 1.0
+2021-06-13 13:44:13,168 INFO connectivity_recurrent: 10
+2021-06-13 13:44:13,168 INFO connectivity_input: 10
+2021-06-13 13:44:13,168 INFO connectivity_inter: 10
+2021-06-13 13:44:13,168 INFO return_sequences: false
+2021-06-13 13:45:13,710 INFO validation_loss: 0.00039769074646756053
+2021-06-13 13:46:19,857 INFO normalized prediction error: 0.01
+2021-06-13 13:46:20,644 INFO Channel Stats: TP: 2  FP: 0  FN: 0
+2021-06-13 13:46:20,645 INFO Total true positives: 35
+2021-06-13 13:46:20,645 INFO Total false positives: 6
+2021-06-13 13:46:20,645 INFO Total false negatives: 17
+
+2021-06-13 13:46:20,649 INFO Stream # 41: D-11
+2021-06-13 13:46:20,913 INFO units: 450
+2021-06-13 13:46:20,913 INFO layers: 1
+2021-06-13 13:46:20,913 INFO concat: false
+2021-06-13 13:46:20,913 INFO input_scaling: 1
+2021-06-13 13:46:20,913 INFO inter_scaling: 1
+2021-06-13 13:46:20,913 INFO radius: 1.0
+2021-06-13 13:46:20,913 INFO leaky: 0.57
+2021-06-13 13:46:20,913 INFO connectivity_recurrent: 10
+2021-06-13 13:46:20,913 INFO connectivity_input: 10
+2021-06-13 13:46:20,913 INFO connectivity_inter: 10
+2021-06-13 13:46:20,914 INFO return_sequences: false
+2021-06-13 13:47:30,758 INFO validation_loss: 0.0019822928588837385
+2021-06-13 13:48:30,153 INFO normalized prediction error: 0.04
+2021-06-13 13:48:30,584 INFO Channel Stats: TP: 0  FP: 0  FN: 1
+2021-06-13 13:48:30,585 INFO Total true positives: 35
+2021-06-13 13:48:30,585 INFO Total false positives: 6
+2021-06-13 13:48:30,585 INFO Total false negatives: 18
+
+2021-06-13 13:48:30,590 INFO Stream # 42: D-12
+2021-06-13 13:48:30,771 INFO units: 550
+2021-06-13 13:48:30,773 INFO layers: 1
+2021-06-13 13:48:30,773 INFO concat: false
+2021-06-13 13:48:30,773 INFO input_scaling: 1
+2021-06-13 13:48:30,773 INFO inter_scaling: 1
+2021-06-13 13:48:30,773 INFO radius: 0.1
+2021-06-13 13:48:30,773 INFO leaky: 0.86
+2021-06-13 13:48:30,773 INFO connectivity_recurrent: 10
+2021-06-13 13:48:30,773 INFO connectivity_input: 10
+2021-06-13 13:48:30,773 INFO connectivity_inter: 10
+2021-06-13 13:48:30,773 INFO return_sequences: false
+2021-06-13 13:48:35,751 INFO validation_loss: 0.0035382278729230165
+2021-06-13 13:49:38,369 INFO normalized prediction error: 0.13
+2021-06-13 13:49:38,905 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 13:49:38,905 INFO Total true positives: 36
+2021-06-13 13:49:38,905 INFO Total false positives: 6
+2021-06-13 13:49:38,905 INFO Total false negatives: 18
+
+2021-06-13 13:49:38,910 INFO Stream # 43: B-1
+2021-06-13 13:49:39,147 INFO units: 650
+2021-06-13 13:49:39,147 INFO layers: 1
+2021-06-13 13:49:39,147 INFO concat: false
+2021-06-13 13:49:39,147 INFO input_scaling: 1
+2021-06-13 13:49:39,147 INFO inter_scaling: 1
+2021-06-13 13:49:39,147 INFO radius: 0.67
+2021-06-13 13:49:39,147 INFO leaky: 0.76
+2021-06-13 13:49:39,148 INFO connectivity_recurrent: 10
+2021-06-13 13:49:39,148 INFO connectivity_input: 10
+2021-06-13 13:49:39,148 INFO connectivity_inter: 10
+2021-06-13 13:49:39,148 INFO return_sequences: false
+2021-06-13 13:50:23,607 INFO validation_loss: 0.00010177917283726856
+2021-06-13 13:51:26,753 INFO normalized prediction error: 0.39
+2021-06-13 13:51:27,307 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 13:51:27,307 INFO Total true positives: 37
+2021-06-13 13:51:27,307 INFO Total false positives: 6
+2021-06-13 13:51:27,307 INFO Total false negatives: 18
+
+2021-06-13 13:51:27,312 INFO Stream # 44: G-6
+2021-06-13 13:51:27,539 INFO units: 450
+2021-06-13 13:51:27,539 INFO layers: 1
+2021-06-13 13:51:27,540 INFO concat: false
+2021-06-13 13:51:27,540 INFO input_scaling: 1
+2021-06-13 13:51:27,540 INFO inter_scaling: 1
+2021-06-13 13:51:27,540 INFO radius: 1.0
+2021-06-13 13:51:27,540 INFO leaky: 0.48
+2021-06-13 13:51:27,540 INFO connectivity_recurrent: 10
+2021-06-13 13:51:27,540 INFO connectivity_input: 10
+2021-06-13 13:51:27,540 INFO connectivity_inter: 10
+2021-06-13 13:51:27,540 INFO return_sequences: false
+2021-06-13 13:52:44,285 INFO validation_loss: 0.0007368699298240244
+2021-06-13 13:53:53,987 INFO normalized prediction error: 0.02
+2021-06-13 13:53:54,456 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 13:53:54,456 INFO Total true positives: 38
+2021-06-13 13:53:54,456 INFO Total false positives: 6
+2021-06-13 13:53:54,457 INFO Total false negatives: 18
+
+2021-06-13 13:53:54,461 INFO Stream # 45: G-7
+2021-06-13 13:53:54,693 INFO units: 250
+2021-06-13 13:53:54,693 INFO layers: 1
+2021-06-13 13:53:54,693 INFO concat: false
+2021-06-13 13:53:54,693 INFO input_scaling: 1
+2021-06-13 13:53:54,693 INFO inter_scaling: 1
+2021-06-13 13:53:54,693 INFO radius: 0.1
+2021-06-13 13:53:54,693 INFO leaky: 0.76
+2021-06-13 13:53:54,693 INFO connectivity_recurrent: 10
+2021-06-13 13:53:54,693 INFO connectivity_input: 10
+2021-06-13 13:53:54,693 INFO connectivity_inter: 10
+2021-06-13 13:53:54,693 INFO return_sequences: false
+2021-06-13 13:54:32,623 INFO validation_loss: 0.03492133319377899
+2021-06-13 13:55:34,506 INFO normalized prediction error: 0.03
+2021-06-13 13:55:35,293 INFO Channel Stats: TP: 3  FP: 0  FN: 0
+2021-06-13 13:55:35,293 INFO Total true positives: 41
+2021-06-13 13:55:35,293 INFO Total false positives: 6
+2021-06-13 13:55:35,294 INFO Total false negatives: 18
+
+2021-06-13 13:55:35,298 INFO Stream # 46: P-7
+2021-06-13 13:55:35,496 INFO units: 50
+2021-06-13 13:55:35,496 INFO layers: 1
+2021-06-13 13:55:35,496 INFO concat: false
+2021-06-13 13:55:35,496 INFO input_scaling: 1
+2021-06-13 13:55:35,496 INFO inter_scaling: 1
+2021-06-13 13:55:35,496 INFO radius: 0.29
+2021-06-13 13:55:35,496 INFO leaky: 0.95
+2021-06-13 13:55:35,496 INFO connectivity_recurrent: 10
+2021-06-13 13:55:35,496 INFO connectivity_input: 10
+2021-06-13 13:55:35,496 INFO connectivity_inter: 10
+2021-06-13 13:55:35,496 INFO return_sequences: false
+2021-06-13 13:56:51,063 INFO validation_loss: 0.015603335574269295
+2021-06-13 13:57:53,126 INFO normalized prediction error: 0.03
+2021-06-13 13:57:53,579 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 13:57:53,579 INFO Total true positives: 42
+2021-06-13 13:57:53,579 INFO Total false positives: 6
+2021-06-13 13:57:53,579 INFO Total false negatives: 18
+
+2021-06-13 13:57:53,584 INFO Stream # 47: R-1
+2021-06-13 13:57:53,798 INFO units: 450
+2021-06-13 13:57:53,798 INFO layers: 1
+2021-06-13 13:57:53,798 INFO concat: false
+2021-06-13 13:57:53,798 INFO input_scaling: 1
+2021-06-13 13:57:53,798 INFO inter_scaling: 1
+2021-06-13 13:57:53,798 INFO radius: 0.1
+2021-06-13 13:57:53,798 INFO leaky: 1.0
+2021-06-13 13:57:53,798 INFO connectivity_recurrent: 10
+2021-06-13 13:57:53,798 INFO connectivity_input: 10
+2021-06-13 13:57:53,798 INFO connectivity_inter: 10
+2021-06-13 13:57:53,798 INFO return_sequences: false
+2021-06-13 13:58:47,387 INFO validation_loss: 5.423121911007911e-05
+2021-06-13 13:59:44,404 INFO normalized prediction error: 0.00
+2021-06-13 13:59:48,509 INFO Channel Stats: TP: 0  FP: 0  FN: 1
+2021-06-13 13:59:48,509 INFO Total true positives: 42
+2021-06-13 13:59:48,509 INFO Total false positives: 6
+2021-06-13 13:59:48,509 INFO Total false negatives: 19
+
+2021-06-13 13:59:48,514 INFO Stream # 48: A-5
+2021-06-13 13:59:48,644 INFO units: 550
+2021-06-13 13:59:48,644 INFO layers: 1
+2021-06-13 13:59:48,644 INFO concat: false
+2021-06-13 13:59:48,644 INFO input_scaling: 1
+2021-06-13 13:59:48,644 INFO inter_scaling: 1
+2021-06-13 13:59:48,644 INFO radius: 0.1
+2021-06-13 13:59:48,644 INFO leaky: 1.0
+2021-06-13 13:59:48,644 INFO connectivity_recurrent: 10
+2021-06-13 13:59:48,644 INFO connectivity_input: 10
+2021-06-13 13:59:48,644 INFO connectivity_inter: 10
+2021-06-13 13:59:48,644 INFO return_sequences: false
+2021-06-13 14:00:09,616 INFO validation_loss: 0.00041897737537510693
+2021-06-13 14:00:45,809 INFO normalized prediction error: 0.26
+2021-06-13 14:00:45,993 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 14:00:45,994 INFO Total true positives: 43
+2021-06-13 14:00:45,994 INFO Total false positives: 6
+2021-06-13 14:00:45,994 INFO Total false negatives: 19
+
+2021-06-13 14:00:45,999 INFO Stream # 49: A-6
+2021-06-13 14:00:46,139 INFO units: 550
+2021-06-13 14:00:46,139 INFO layers: 1
+2021-06-13 14:00:46,139 INFO concat: false
+2021-06-13 14:00:46,139 INFO input_scaling: 1
+2021-06-13 14:00:46,139 INFO inter_scaling: 1
+2021-06-13 14:00:46,139 INFO radius: 0.1
+2021-06-13 14:00:46,139 INFO leaky: 1.0
+2021-06-13 14:00:46,139 INFO connectivity_recurrent: 10
+2021-06-13 14:00:46,139 INFO connectivity_input: 10
+2021-06-13 14:00:46,139 INFO connectivity_inter: 10
+2021-06-13 14:00:46,139 INFO return_sequences: false
+2021-06-13 14:01:37,529 INFO validation_loss: 0.04202583059668541
+2021-06-13 14:02:11,714 INFO normalized prediction error: 0.11
+2021-06-13 14:02:12,016 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 14:02:12,017 INFO Total true positives: 44
+2021-06-13 14:02:12,017 INFO Total false positives: 6
+2021-06-13 14:02:12,017 INFO Total false negatives: 19
+
+2021-06-13 14:02:12,022 INFO Stream # 50: A-7
+2021-06-13 14:02:12,232 INFO units: 650
+2021-06-13 14:02:12,233 INFO layers: 1
+2021-06-13 14:02:12,233 INFO concat: false
+2021-06-13 14:02:12,233 INFO input_scaling: 1
+2021-06-13 14:02:12,233 INFO inter_scaling: 1
+2021-06-13 14:02:12,233 INFO radius: 1.0
+2021-06-13 14:02:12,233 INFO leaky: 0.72
+2021-06-13 14:02:12,233 INFO connectivity_recurrent: 10
+2021-06-13 14:02:12,233 INFO connectivity_input: 10
+2021-06-13 14:02:12,233 INFO connectivity_inter: 10
+2021-06-13 14:02:12,233 INFO return_sequences: false
+2021-06-13 14:04:27,456 INFO validation_loss: 0.08442509919404984
+2021-06-13 14:05:36,305 INFO normalized prediction error: 0.04
+2021-06-13 14:05:36,921 INFO Channel Stats: TP: 0  FP: 0  FN: 1
+2021-06-13 14:05:36,921 INFO Total true positives: 44
+2021-06-13 14:05:36,921 INFO Total false positives: 6
+2021-06-13 14:05:36,921 INFO Total false negatives: 20
+
+2021-06-13 14:05:36,926 INFO Stream # 51: D-13
+2021-06-13 14:05:37,126 INFO units: 550
+2021-06-13 14:05:37,126 INFO layers: 1
+2021-06-13 14:05:37,126 INFO concat: false
+2021-06-13 14:05:37,127 INFO input_scaling: 1
+2021-06-13 14:05:37,127 INFO inter_scaling: 1
+2021-06-13 14:05:37,127 INFO radius: 0.1
+2021-06-13 14:05:37,127 INFO leaky: 1.0
+2021-06-13 14:05:37,127 INFO connectivity_recurrent: 10
+2021-06-13 14:05:37,127 INFO connectivity_input: 10
+2021-06-13 14:05:37,127 INFO connectivity_inter: 10
+2021-06-13 14:05:37,127 INFO return_sequences: false
+2021-06-13 14:06:06,445 INFO validation_loss: 4.057249114453043e-08
+2021-06-13 14:07:07,026 INFO normalized prediction error: 0.28
+2021-06-13 14:07:07,536 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 14:07:07,536 INFO Total true positives: 45
+2021-06-13 14:07:07,536 INFO Total false positives: 6
+2021-06-13 14:07:07,537 INFO Total false negatives: 20
+
+2021-06-13 14:07:07,542 INFO Stream # 52: P-2
+2021-06-13 14:07:07,723 INFO units: 850
+2021-06-13 14:07:07,723 INFO layers: 1
+2021-06-13 14:07:07,723 INFO concat: false
+2021-06-13 14:07:07,723 INFO input_scaling: 1
+2021-06-13 14:07:07,723 INFO inter_scaling: 1
+2021-06-13 14:07:07,723 INFO radius: 0.1
+2021-06-13 14:07:07,723 INFO leaky: 0.34
+2021-06-13 14:07:07,723 INFO connectivity_recurrent: 10
+2021-06-13 14:07:07,723 INFO connectivity_input: 10
+2021-06-13 14:07:07,724 INFO connectivity_inter: 10
+2021-06-13 14:07:07,724 INFO return_sequences: false
+2021-06-13 14:07:59,835 INFO validation_loss: 0.0008500179392285645
+2021-06-13 14:09:04,300 INFO normalized prediction error: 0.06
+2021-06-13 14:09:04,718 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 14:09:04,718 INFO Total true positives: 46
+2021-06-13 14:09:04,718 INFO Total false positives: 6
+2021-06-13 14:09:04,718 INFO Total false negatives: 20
+
+2021-06-13 14:09:04,724 INFO Stream # 53: A-8
+2021-06-13 14:09:04,910 INFO units: 150
+2021-06-13 14:09:04,910 INFO layers: 1
+2021-06-13 14:09:04,910 INFO concat: false
+2021-06-13 14:09:04,910 INFO input_scaling: 1
+2021-06-13 14:09:04,910 INFO inter_scaling: 1
+2021-06-13 14:09:04,910 INFO radius: 0.1
+2021-06-13 14:09:04,910 INFO leaky: 1.0
+2021-06-13 14:09:04,910 INFO connectivity_recurrent: 10
+2021-06-13 14:09:04,910 INFO connectivity_input: 10
+2021-06-13 14:09:04,910 INFO connectivity_inter: 10
+2021-06-13 14:09:04,910 INFO return_sequences: false
+2021-06-13 14:09:53,591 INFO validation_loss: 0.041930362582206726
+2021-06-13 14:10:57,491 INFO normalized prediction error: 0.03
+2021-06-13 14:10:57,946 INFO Channel Stats: TP: 0  FP: 0  FN: 1
+2021-06-13 14:10:57,946 INFO Total true positives: 46
+2021-06-13 14:10:57,946 INFO Total false positives: 6
+2021-06-13 14:10:57,946 INFO Total false negatives: 21
+
+2021-06-13 14:10:57,951 INFO Stream # 54: A-9
+2021-06-13 14:10:58,120 INFO units: 150
+2021-06-13 14:10:58,121 INFO layers: 1
+2021-06-13 14:10:58,121 INFO concat: false
+2021-06-13 14:10:58,121 INFO input_scaling: 1
+2021-06-13 14:10:58,121 INFO inter_scaling: 1
+2021-06-13 14:10:58,121 INFO radius: 0.1
+2021-06-13 14:10:58,121 INFO leaky: 1.0
+2021-06-13 14:10:58,121 INFO connectivity_recurrent: 10
+2021-06-13 14:10:58,121 INFO connectivity_input: 10
+2021-06-13 14:10:58,121 INFO connectivity_inter: 10
+2021-06-13 14:10:58,121 INFO return_sequences: false
+2021-06-13 14:11:54,762 INFO validation_loss: 0.0309971421957016
+2021-06-13 14:13:00,519 INFO normalized prediction error: 0.04
+2021-06-13 14:13:00,910 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 14:13:00,911 INFO Total true positives: 47
+2021-06-13 14:13:00,911 INFO Total false positives: 6
+2021-06-13 14:13:00,911 INFO Total false negatives: 21
+
+2021-06-13 14:13:00,916 INFO Stream # 55: F-3
+2021-06-13 14:13:01,162 INFO units: 450
+2021-06-13 14:13:01,162 INFO layers: 1
+2021-06-13 14:13:01,162 INFO concat: false
+2021-06-13 14:13:01,162 INFO input_scaling: 1
+2021-06-13 14:13:01,162 INFO inter_scaling: 1
+2021-06-13 14:13:01,162 INFO radius: 1.0
+2021-06-13 14:13:01,162 INFO leaky: 0.48
+2021-06-13 14:13:01,162 INFO connectivity_recurrent: 10
+2021-06-13 14:13:01,163 INFO connectivity_input: 10
+2021-06-13 14:13:01,163 INFO connectivity_inter: 10
+2021-06-13 14:13:01,163 INFO return_sequences: false
+2021-06-13 14:14:10,965 INFO validation_loss: 0.0008497192175127566
+2021-06-13 14:15:17,046 INFO normalized prediction error: 0.02
+2021-06-13 14:15:17,435 INFO Channel Stats: TP: 0  FP: 0  FN: 1
+2021-06-13 14:15:17,435 INFO Total true positives: 47
+2021-06-13 14:15:17,435 INFO Total false positives: 6
+2021-06-13 14:15:17,436 INFO Total false negatives: 22
+
+2021-06-13 14:15:17,441 INFO Stream # 56: M-6
+2021-06-13 14:15:17,676 INFO units: 950
+2021-06-13 14:15:17,676 INFO layers: 1
+2021-06-13 14:15:17,676 INFO concat: false
+2021-06-13 14:15:17,676 INFO input_scaling: 1
+2021-06-13 14:15:17,676 INFO inter_scaling: 1
+2021-06-13 14:15:17,676 INFO radius: 0.24
+2021-06-13 14:15:17,676 INFO leaky: 0.76
+2021-06-13 14:15:17,676 INFO connectivity_recurrent: 10
+2021-06-13 14:15:17,676 INFO connectivity_input: 10
+2021-06-13 14:15:17,676 INFO connectivity_inter: 10
+2021-06-13 14:15:17,676 INFO return_sequences: false
+2021-06-13 14:16:05,581 INFO validation_loss: 0.0001816656586015597
+2021-06-13 14:16:19,716 INFO normalized prediction error: 0.05
+2021-06-13 14:16:19,727 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 14:16:19,728 INFO Total true positives: 48
+2021-06-13 14:16:19,728 INFO Total false positives: 6
+2021-06-13 14:16:19,728 INFO Total false negatives: 22
+
+2021-06-13 14:16:19,734 INFO Stream # 57: M-1
+2021-06-13 14:16:19,986 INFO units: 750
+2021-06-13 14:16:19,986 INFO layers: 1
+2021-06-13 14:16:19,986 INFO concat: false
+2021-06-13 14:16:19,986 INFO input_scaling: 1
+2021-06-13 14:16:19,986 INFO inter_scaling: 1
+2021-06-13 14:16:19,986 INFO radius: 1.0
+2021-06-13 14:16:19,986 INFO leaky: 0.67
+2021-06-13 14:16:19,986 INFO connectivity_recurrent: 10
+2021-06-13 14:16:19,986 INFO connectivity_input: 10
+2021-06-13 14:16:19,987 INFO connectivity_inter: 10
+2021-06-13 14:16:19,987 INFO return_sequences: false
+2021-06-13 14:19:41,023 INFO validation_loss: 0.278023362159729
+2021-06-13 14:19:57,514 INFO normalized prediction error: 0.04
+2021-06-13 14:19:57,522 INFO Channel Stats: TP: 0  FP: 1  FN: 1
+2021-06-13 14:19:57,522 INFO Total true positives: 48
+2021-06-13 14:19:57,522 INFO Total false positives: 7
+2021-06-13 14:19:57,522 INFO Total false negatives: 23
+
+2021-06-13 14:19:57,527 INFO Stream # 58: M-2
+2021-06-13 14:19:57,754 INFO units: 50
+2021-06-13 14:19:57,754 INFO layers: 1
+2021-06-13 14:19:57,754 INFO concat: false
+2021-06-13 14:19:57,754 INFO input_scaling: 1
+2021-06-13 14:19:57,754 INFO inter_scaling: 1
+2021-06-13 14:19:57,754 INFO radius: 1.0
+2021-06-13 14:19:57,754 INFO leaky: 0.1
+2021-06-13 14:19:57,754 INFO connectivity_recurrent: 10
+2021-06-13 14:19:57,754 INFO connectivity_input: 10
+2021-06-13 14:19:57,754 INFO connectivity_inter: 10
+2021-06-13 14:19:57,754 INFO return_sequences: false
+2021-06-13 14:22:47,754 INFO validation_loss: 0.03686729446053505
+2021-06-13 14:23:03,748 INFO normalized prediction error: 0.08
+2021-06-13 14:23:03,753 INFO Channel Stats: TP: 0  FP: 0  FN: 1
+2021-06-13 14:23:03,753 INFO Total true positives: 48
+2021-06-13 14:23:03,753 INFO Total false positives: 7
+2021-06-13 14:23:03,753 INFO Total false negatives: 24
+
+2021-06-13 14:23:03,759 INFO Stream # 59: S-2
+2021-06-13 14:23:03,925 INFO units: 750
+2021-06-13 14:23:03,925 INFO layers: 1
+2021-06-13 14:23:03,925 INFO concat: false
+2021-06-13 14:23:03,925 INFO input_scaling: 1
+2021-06-13 14:23:03,925 INFO inter_scaling: 1
+2021-06-13 14:23:03,925 INFO radius: 1.0
+2021-06-13 14:23:03,925 INFO leaky: 0.86
+2021-06-13 14:23:03,925 INFO connectivity_recurrent: 10
+2021-06-13 14:23:03,925 INFO connectivity_input: 10
+2021-06-13 14:23:03,925 INFO connectivity_inter: 10
+2021-06-13 14:23:03,925 INFO return_sequences: false
+2021-06-13 14:23:41,204 INFO validation_loss: 0.00045575964031741023
+2021-06-13 14:23:53,595 INFO normalized prediction error: 0.01
+2021-06-13 14:23:53,607 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 14:23:53,607 INFO Total true positives: 49
+2021-06-13 14:23:53,607 INFO Total false positives: 7
+2021-06-13 14:23:53,607 INFO Total false negatives: 24
+
+2021-06-13 14:23:53,613 INFO Stream # 60: P-10
+2021-06-13 14:23:54,079 INFO units: 950
+2021-06-13 14:23:54,079 INFO layers: 1
+2021-06-13 14:23:54,079 INFO concat: false
+2021-06-13 14:23:54,079 INFO input_scaling: 1
+2021-06-13 14:23:54,079 INFO inter_scaling: 1
+2021-06-13 14:23:54,079 INFO radius: 0.1
+2021-06-13 14:23:54,079 INFO leaky: 0.34
+2021-06-13 14:23:54,080 INFO connectivity_recurrent: 10
+2021-06-13 14:23:54,080 INFO connectivity_input: 10
+2021-06-13 14:23:54,080 INFO connectivity_inter: 10
+2021-06-13 14:23:54,080 INFO return_sequences: false
+2021-06-13 14:25:01,881 INFO validation_loss: 1.0080819265567698e-05
+2021-06-13 14:25:49,275 INFO normalized prediction error: 0.18
+2021-06-13 14:25:49,596 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 14:25:49,596 INFO Total true positives: 50
+2021-06-13 14:25:49,596 INFO Total false positives: 7
+2021-06-13 14:25:49,596 INFO Total false negatives: 24
+
+2021-06-13 14:25:49,602 INFO Stream # 61: T-4
+2021-06-13 14:25:49,899 INFO units: 250
+2021-06-13 14:25:49,899 INFO layers: 1
+2021-06-13 14:25:49,899 INFO concat: false
+2021-06-13 14:25:49,899 INFO input_scaling: 1
+2021-06-13 14:25:49,899 INFO inter_scaling: 1
+2021-06-13 14:25:49,899 INFO radius: 1.0
+2021-06-13 14:25:49,899 INFO leaky: 0.53
+2021-06-13 14:25:49,899 INFO connectivity_recurrent: 10
+2021-06-13 14:25:49,899 INFO connectivity_input: 10
+2021-06-13 14:25:49,900 INFO connectivity_inter: 10
+2021-06-13 14:25:49,900 INFO return_sequences: false
+2021-06-13 14:27:46,632 INFO validation_loss: 0.16627804934978485
+2021-06-13 14:28:01,685 INFO normalized prediction error: 0.06
+2021-06-13 14:28:01,693 INFO Channel Stats: TP: 0  FP: 0  FN: 1
+2021-06-13 14:28:01,693 INFO Total true positives: 50
+2021-06-13 14:28:01,693 INFO Total false positives: 7
+2021-06-13 14:28:01,693 INFO Total false negatives: 25
+
+2021-06-13 14:28:01,699 INFO Stream # 62: T-5
+2021-06-13 14:28:01,918 INFO units: 950
+2021-06-13 14:28:01,918 INFO layers: 1
+2021-06-13 14:28:01,919 INFO concat: false
+2021-06-13 14:28:01,919 INFO input_scaling: 1
+2021-06-13 14:28:01,919 INFO inter_scaling: 1
+2021-06-13 14:28:01,919 INFO radius: 1.0
+2021-06-13 14:28:01,919 INFO leaky: 0.34
+2021-06-13 14:28:01,919 INFO connectivity_recurrent: 10
+2021-06-13 14:28:01,919 INFO connectivity_input: 10
+2021-06-13 14:28:01,919 INFO connectivity_inter: 10
+2021-06-13 14:28:01,919 INFO return_sequences: false
+2021-06-13 14:28:43,417 INFO validation_loss: 7.352175452979282e-05
+2021-06-13 14:28:58,899 INFO normalized prediction error: 0.00
+2021-06-13 14:28:58,913 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 14:28:58,913 INFO Total true positives: 51
+2021-06-13 14:28:58,913 INFO Total false positives: 7
+2021-06-13 14:28:58,913 INFO Total false negatives: 25
+
+2021-06-13 14:28:58,919 INFO Stream # 63: F-7
+2021-06-13 14:28:59,243 INFO units: 150
+2021-06-13 14:28:59,243 INFO layers: 1
+2021-06-13 14:28:59,243 INFO concat: false
+2021-06-13 14:28:59,243 INFO input_scaling: 1
+2021-06-13 14:28:59,243 INFO inter_scaling: 1
+2021-06-13 14:28:59,243 INFO radius: 0.1
+2021-06-13 14:28:59,243 INFO leaky: 0.81
+2021-06-13 14:28:59,243 INFO connectivity_recurrent: 10
+2021-06-13 14:28:59,243 INFO connectivity_input: 10
+2021-06-13 14:28:59,243 INFO connectivity_inter: 10
+2021-06-13 14:28:59,243 INFO return_sequences: false
+2021-06-13 14:32:49,237 INFO validation_loss: 0.34326741099357605
+2021-06-13 14:33:27,485 INFO normalized prediction error: 0.16
+2021-06-13 14:33:27,712 INFO Channel Stats: TP: 2  FP: 1  FN: 1
+2021-06-13 14:33:27,712 INFO Total true positives: 53
+2021-06-13 14:33:27,712 INFO Total false positives: 8
+2021-06-13 14:33:27,712 INFO Total false negatives: 26
+
+2021-06-13 14:33:27,718 INFO Stream # 64: M-3
+2021-06-13 14:33:27,936 INFO units: 850
+2021-06-13 14:33:27,936 INFO layers: 1
+2021-06-13 14:33:27,937 INFO concat: false
+2021-06-13 14:33:27,937 INFO input_scaling: 1
+2021-06-13 14:33:27,937 INFO inter_scaling: 1
+2021-06-13 14:33:27,937 INFO radius: 1.0
+2021-06-13 14:33:27,937 INFO leaky: 0.53
+2021-06-13 14:33:27,937 INFO connectivity_recurrent: 10
+2021-06-13 14:33:27,937 INFO connectivity_input: 10
+2021-06-13 14:33:27,937 INFO connectivity_inter: 10
+2021-06-13 14:33:27,937 INFO return_sequences: false
+2021-06-13 14:34:10,036 INFO validation_loss: 0.12187359482049942
+2021-06-13 14:34:25,116 INFO normalized prediction error: 0.05
+2021-06-13 14:34:25,125 INFO Channel Stats: TP: 0  FP: 1  FN: 1
+2021-06-13 14:34:25,125 INFO Total true positives: 53
+2021-06-13 14:34:25,125 INFO Total false positives: 9
+2021-06-13 14:34:25,125 INFO Total false negatives: 27
+
+2021-06-13 14:34:25,131 INFO Stream # 65: M-4
+2021-06-13 14:34:25,340 INFO units: 850
+2021-06-13 14:34:25,340 INFO layers: 1
+2021-06-13 14:34:25,340 INFO concat: false
+2021-06-13 14:34:25,340 INFO input_scaling: 1
+2021-06-13 14:34:25,340 INFO inter_scaling: 1
+2021-06-13 14:34:25,340 INFO radius: 1.0
+2021-06-13 14:34:25,340 INFO leaky: 0.53
+2021-06-13 14:34:25,340 INFO connectivity_recurrent: 10
+2021-06-13 14:34:25,340 INFO connectivity_input: 10
+2021-06-13 14:34:25,340 INFO connectivity_inter: 10
+2021-06-13 14:34:25,340 INFO return_sequences: false
+2021-06-13 14:35:17,087 INFO validation_loss: 0.13351798057556152
+2021-06-13 14:35:31,139 INFO normalized prediction error: 0.06
+2021-06-13 14:35:31,144 INFO Channel Stats: TP: 0  FP: 0  FN: 1
+2021-06-13 14:35:31,144 INFO Total true positives: 53
+2021-06-13 14:35:31,144 INFO Total false positives: 9
+2021-06-13 14:35:31,144 INFO Total false negatives: 28
+
+2021-06-13 14:35:31,150 INFO Stream # 66: M-5
+2021-06-13 14:35:31,371 INFO units: 950
+2021-06-13 14:35:31,371 INFO layers: 1
+2021-06-13 14:35:31,372 INFO concat: false
+2021-06-13 14:35:31,372 INFO input_scaling: 1
+2021-06-13 14:35:31,372 INFO inter_scaling: 1
+2021-06-13 14:35:31,372 INFO radius: 1.0
+2021-06-13 14:35:31,372 INFO leaky: 0.62
+2021-06-13 14:35:31,372 INFO connectivity_recurrent: 10
+2021-06-13 14:35:31,372 INFO connectivity_input: 10
+2021-06-13 14:35:31,372 INFO connectivity_inter: 10
+2021-06-13 14:35:31,372 INFO return_sequences: false
+2021-06-13 14:37:54,775 INFO validation_loss: 0.26096856594085693
+2021-06-13 14:38:10,615 INFO normalized prediction error: 0.05
+2021-06-13 14:38:10,623 INFO Channel Stats: TP: 0  FP: 0  FN: 1
+2021-06-13 14:38:10,623 INFO Total true positives: 53
+2021-06-13 14:38:10,623 INFO Total false positives: 9
+2021-06-13 14:38:10,623 INFO Total false negatives: 29
+
+2021-06-13 14:38:10,629 INFO Stream # 67: P-15
+2021-06-13 14:38:10,939 INFO units: 750
+2021-06-13 14:38:10,939 INFO layers: 1
+2021-06-13 14:38:10,939 INFO concat: false
+2021-06-13 14:38:10,939 INFO input_scaling: 1
+2021-06-13 14:38:10,939 INFO inter_scaling: 1
+2021-06-13 14:38:10,939 INFO radius: 0.38
+2021-06-13 14:38:10,939 INFO leaky: 0.48
+2021-06-13 14:38:10,939 INFO connectivity_recurrent: 10
+2021-06-13 14:38:10,939 INFO connectivity_input: 10
+2021-06-13 14:38:10,939 INFO connectivity_inter: 10
+2021-06-13 14:38:10,939 INFO return_sequences: false
+2021-06-13 14:39:08,154 INFO validation_loss: 0.001094983541406691
+2021-06-13 14:39:29,270 INFO normalized prediction error: 0.47
+2021-06-13 14:39:29,302 INFO Channel Stats: TP: 0  FP: 0  FN: 1
+2021-06-13 14:39:29,302 INFO Total true positives: 53
+2021-06-13 14:39:29,302 INFO Total false positives: 9
+2021-06-13 14:39:29,302 INFO Total false negatives: 30
+
+2021-06-13 14:39:29,308 INFO Stream # 68: C-1
+2021-06-13 14:39:29,535 INFO units: 750
+2021-06-13 14:39:29,535 INFO layers: 1
+2021-06-13 14:39:29,535 INFO concat: false
+2021-06-13 14:39:29,535 INFO input_scaling: 1
+2021-06-13 14:39:29,535 INFO inter_scaling: 1
+2021-06-13 14:39:29,535 INFO radius: 1.0
+2021-06-13 14:39:29,535 INFO leaky: 0.48
+2021-06-13 14:39:29,535 INFO connectivity_recurrent: 10
+2021-06-13 14:39:29,535 INFO connectivity_input: 10
+2021-06-13 14:39:29,535 INFO connectivity_inter: 10
+2021-06-13 14:39:29,535 INFO return_sequences: false
+2021-06-13 14:41:17,207 INFO validation_loss: 0.04006260260939598
+2021-06-13 14:41:33,231 INFO normalized prediction error: 0.02
+2021-06-13 14:41:33,241 INFO Channel Stats: TP: 1  FP: 0  FN: 1
+2021-06-13 14:41:33,242 INFO Total true positives: 54
+2021-06-13 14:41:33,242 INFO Total false positives: 9
+2021-06-13 14:41:33,242 INFO Total false negatives: 31
+
+2021-06-13 14:41:33,248 INFO Stream # 69: C-2
+2021-06-13 14:41:33,402 INFO units: 950
+2021-06-13 14:41:33,402 INFO layers: 1
+2021-06-13 14:41:33,402 INFO concat: false
+2021-06-13 14:41:33,402 INFO input_scaling: 1
+2021-06-13 14:41:33,402 INFO inter_scaling: 1
+2021-06-13 14:41:33,402 INFO radius: 1.0
+2021-06-13 14:41:33,402 INFO leaky: 0.91
+2021-06-13 14:41:33,402 INFO connectivity_recurrent: 10
+2021-06-13 14:41:33,402 INFO connectivity_input: 10
+2021-06-13 14:41:33,403 INFO connectivity_inter: 10
+2021-06-13 14:41:33,403 INFO return_sequences: false
+2021-06-13 14:42:01,437 INFO validation_loss: 0.0006627282709814608
+2021-06-13 14:42:15,945 INFO normalized prediction error: 0.22
+2021-06-13 14:42:15,952 INFO Channel Stats: TP: 1  FP: 0  FN: 1
+2021-06-13 14:42:15,952 INFO Total true positives: 55
+2021-06-13 14:42:15,952 INFO Total false positives: 9
+2021-06-13 14:42:15,952 INFO Total false negatives: 32
+
+2021-06-13 14:42:15,958 INFO Stream # 70: T-12
+2021-06-13 14:42:16,116 INFO units: 950
+2021-06-13 14:42:16,116 INFO layers: 1
+2021-06-13 14:42:16,116 INFO concat: false
+2021-06-13 14:42:16,116 INFO input_scaling: 1
+2021-06-13 14:42:16,116 INFO inter_scaling: 1
+2021-06-13 14:42:16,116 INFO radius: 1.0
+2021-06-13 14:42:16,116 INFO leaky: 0.62
+2021-06-13 14:42:16,116 INFO connectivity_recurrent: 10
+2021-06-13 14:42:16,116 INFO connectivity_input: 10
+2021-06-13 14:42:16,116 INFO connectivity_inter: 10
+2021-06-13 14:42:16,116 INFO return_sequences: false
+2021-06-13 14:42:49,014 INFO validation_loss: 0.009878895245492458
+2021-06-13 14:43:06,502 INFO normalized prediction error: 0.02
+2021-06-13 14:43:06,519 INFO Channel Stats: TP: 1  FP: 2  FN: 0
+2021-06-13 14:43:06,519 INFO Total true positives: 56
+2021-06-13 14:43:06,519 INFO Total false positives: 11
+2021-06-13 14:43:06,519 INFO Total false negatives: 32
+
+2021-06-13 14:43:06,525 INFO Stream # 71: T-13
+2021-06-13 14:43:06,664 INFO units: 150
+2021-06-13 14:43:06,664 INFO layers: 1
+2021-06-13 14:43:06,664 INFO concat: false
+2021-06-13 14:43:06,664 INFO input_scaling: 1
+2021-06-13 14:43:06,664 INFO inter_scaling: 1
+2021-06-13 14:43:06,664 INFO radius: 0.67
+2021-06-13 14:43:06,665 INFO leaky: 0.48
+2021-06-13 14:43:06,665 INFO connectivity_recurrent: 10
+2021-06-13 14:43:06,665 INFO connectivity_input: 10
+2021-06-13 14:43:06,665 INFO connectivity_inter: 10
+2021-06-13 14:43:06,665 INFO return_sequences: false
+2021-06-13 14:44:08,980 INFO validation_loss: 0.0014482324477285147
+2021-06-13 14:44:26,198 INFO normalized prediction error: 0.02
+2021-06-13 14:44:26,214 INFO Channel Stats: TP: 0  FP: 1  FN: 2
+2021-06-13 14:44:26,214 INFO Total true positives: 56
+2021-06-13 14:44:26,214 INFO Total false positives: 12
+2021-06-13 14:44:26,214 INFO Total false negatives: 34
+
+2021-06-13 14:44:26,220 INFO Stream # 72: F-4
+2021-06-13 14:44:26,475 INFO units: 750
+2021-06-13 14:44:26,475 INFO layers: 1
+2021-06-13 14:44:26,476 INFO concat: false
+2021-06-13 14:44:26,476 INFO input_scaling: 1
+2021-06-13 14:44:26,476 INFO inter_scaling: 1
+2021-06-13 14:44:26,476 INFO radius: 1.0
+2021-06-13 14:44:26,476 INFO leaky: 0.53
+2021-06-13 14:44:26,476 INFO connectivity_recurrent: 10
+2021-06-13 14:44:26,476 INFO connectivity_input: 10
+2021-06-13 14:44:26,476 INFO connectivity_inter: 10
+2021-06-13 14:44:26,476 INFO return_sequences: false
+2021-06-13 14:45:36,087 INFO validation_loss: 0.038025859743356705
+2021-06-13 14:46:01,444 INFO normalized prediction error: 0.02
+2021-06-13 14:46:01,582 INFO Channel Stats: TP: 0  FP: 1  FN: 1
+2021-06-13 14:46:01,582 INFO Total true positives: 56
+2021-06-13 14:46:01,582 INFO Total false positives: 13
+2021-06-13 14:46:01,582 INFO Total false negatives: 35
+
+2021-06-13 14:46:01,588 INFO Stream # 73: F-5
+2021-06-13 14:46:01,866 INFO units: 250
+2021-06-13 14:46:01,866 INFO layers: 1
+2021-06-13 14:46:01,866 INFO concat: false
+2021-06-13 14:46:01,866 INFO input_scaling: 1
+2021-06-13 14:46:01,866 INFO inter_scaling: 1
+2021-06-13 14:46:01,866 INFO radius: 0.1
+2021-06-13 14:46:01,866 INFO leaky: 0.24
+2021-06-13 14:46:01,866 INFO connectivity_recurrent: 10
+2021-06-13 14:46:01,866 INFO connectivity_input: 10
+2021-06-13 14:46:01,866 INFO connectivity_inter: 10
+2021-06-13 14:46:01,866 INFO return_sequences: false
+2021-06-13 14:49:20,191 INFO validation_loss: 0.07644177973270416
+2021-06-13 14:49:49,575 INFO normalized prediction error: 0.01
+2021-06-13 14:49:49,801 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 14:49:49,801 INFO Total true positives: 57
+2021-06-13 14:49:49,801 INFO Total false positives: 13
+2021-06-13 14:49:49,801 INFO Total false negatives: 35
+
+2021-06-13 14:49:49,807 INFO Stream # 74: D-14
+2021-06-13 14:49:50,112 INFO units: 750
+2021-06-13 14:49:50,113 INFO layers: 1
+2021-06-13 14:49:50,113 INFO concat: false
+2021-06-13 14:49:50,113 INFO input_scaling: 1
+2021-06-13 14:49:50,113 INFO inter_scaling: 1
+2021-06-13 14:49:50,113 INFO radius: 0.1
+2021-06-13 14:49:50,113 INFO leaky: 0.34
+2021-06-13 14:49:50,113 INFO connectivity_recurrent: 10
+2021-06-13 14:49:50,113 INFO connectivity_input: 10
+2021-06-13 14:49:50,113 INFO connectivity_inter: 10
+2021-06-13 14:49:50,113 INFO return_sequences: false
+2021-06-13 14:50:49,672 INFO validation_loss: 1.6682492059771903e-05
+2021-06-13 14:51:08,971 INFO normalized prediction error: 0.08
+2021-06-13 14:51:09,018 INFO Channel Stats: TP: 1  FP: 0  FN: 1
+2021-06-13 14:51:09,018 INFO Total true positives: 58
+2021-06-13 14:51:09,019 INFO Total false positives: 13
+2021-06-13 14:51:09,019 INFO Total false negatives: 36
+
+2021-06-13 14:51:09,025 INFO Stream # 75: T-9
+2021-06-13 14:51:09,151 INFO units: 250
+2021-06-13 14:51:09,151 INFO layers: 1
+2021-06-13 14:51:09,151 INFO concat: false
+2021-06-13 14:51:09,151 INFO input_scaling: 1
+2021-06-13 14:51:09,152 INFO inter_scaling: 1
+2021-06-13 14:51:09,152 INFO radius: 0.72
+2021-06-13 14:51:09,152 INFO leaky: 0.1
+2021-06-13 14:51:09,152 INFO connectivity_recurrent: 10
+2021-06-13 14:51:09,152 INFO connectivity_input: 10
+2021-06-13 14:51:09,152 INFO connectivity_inter: 10
+2021-06-13 14:51:09,152 INFO return_sequences: false
+2021-06-13 14:51:14,229 INFO validation_loss: 0.005573805421590805
+2021-06-13 14:51:20,662 INFO normalized prediction error: 0.18
+2021-06-13 14:51:20,665 INFO Channel Stats: TP: 0  FP: 0  FN: 2
+2021-06-13 14:51:20,665 INFO Total true positives: 58
+2021-06-13 14:51:20,665 INFO Total false positives: 13
+2021-06-13 14:51:20,665 INFO Total false negatives: 38
+
+2021-06-13 14:51:20,672 INFO Stream # 76: P-14
+2021-06-13 14:51:21,031 INFO units: 950
+2021-06-13 14:51:21,031 INFO layers: 1
+2021-06-13 14:51:21,031 INFO concat: false
+2021-06-13 14:51:21,031 INFO input_scaling: 1
+2021-06-13 14:51:21,031 INFO inter_scaling: 1
+2021-06-13 14:51:21,031 INFO radius: 0.1
+2021-06-13 14:51:21,031 INFO leaky: 0.67
+2021-06-13 14:51:21,031 INFO connectivity_recurrent: 10
+2021-06-13 14:51:21,031 INFO connectivity_input: 10
+2021-06-13 14:51:21,031 INFO connectivity_inter: 10
+2021-06-13 14:51:21,031 INFO return_sequences: false
+2021-06-13 14:52:13,488 INFO validation_loss: 3.497577927191742e-05
+2021-06-13 14:53:01,434 INFO normalized prediction error: 0.17
+2021-06-13 14:53:01,763 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 14:53:01,763 INFO Total true positives: 59
+2021-06-13 14:53:01,763 INFO Total false positives: 13
+2021-06-13 14:53:01,763 INFO Total false negatives: 38
+
+2021-06-13 14:53:01,770 INFO Stream # 77: T-8
+2021-06-13 14:53:01,946 INFO units: 550
+2021-06-13 14:53:01,946 INFO layers: 1
+2021-06-13 14:53:01,946 INFO concat: false
+2021-06-13 14:53:01,946 INFO input_scaling: 1
+2021-06-13 14:53:01,946 INFO inter_scaling: 1
+2021-06-13 14:53:01,946 INFO radius: 1.0
+2021-06-13 14:53:01,946 INFO leaky: 1.0
+2021-06-13 14:53:01,946 INFO connectivity_recurrent: 10
+2021-06-13 14:53:01,946 INFO connectivity_input: 10
+2021-06-13 14:53:01,946 INFO connectivity_inter: 10
+2021-06-13 14:53:01,946 INFO return_sequences: false
+2021-06-13 14:53:25,237 INFO validation_loss: 0.021646197885274887
+2021-06-13 14:53:35,964 INFO normalized prediction error: 0.03
+2021-06-13 14:53:35,974 INFO Channel Stats: TP: 2  FP: 0  FN: 0
+2021-06-13 14:53:35,974 INFO Total true positives: 61
+2021-06-13 14:53:35,974 INFO Total false positives: 13
+2021-06-13 14:53:35,975 INFO Total false negatives: 38
+
+2021-06-13 14:53:35,981 INFO Stream # 78: P-11
+2021-06-13 14:53:36,358 INFO units: 550
+2021-06-13 14:53:36,358 INFO layers: 1
+2021-06-13 14:53:36,358 INFO concat: false
+2021-06-13 14:53:36,358 INFO input_scaling: 1
+2021-06-13 14:53:36,358 INFO inter_scaling: 1
+2021-06-13 14:53:36,358 INFO radius: 0.43
+2021-06-13 14:53:36,358 INFO leaky: 0.29
+2021-06-13 14:53:36,358 INFO connectivity_recurrent: 10
+2021-06-13 14:53:36,358 INFO connectivity_input: 10
+2021-06-13 14:53:36,358 INFO connectivity_inter: 10
+2021-06-13 14:53:36,358 INFO return_sequences: false
+2021-06-13 14:56:33,251 INFO validation_loss: 0.00604133540764451
+2021-06-13 14:57:02,874 INFO normalized prediction error: 0.02
+2021-06-13 14:57:03,053 INFO Channel Stats: TP: 2  FP: 0  FN: 0
+2021-06-13 14:57:03,053 INFO Total true positives: 63
+2021-06-13 14:57:03,053 INFO Total false positives: 13
+2021-06-13 14:57:03,054 INFO Total false negatives: 38
+
+2021-06-13 14:57:03,061 INFO Stream # 79: D-15
+2021-06-13 14:57:03,322 INFO units: 650
+2021-06-13 14:57:03,323 INFO layers: 1
+2021-06-13 14:57:03,323 INFO concat: false
+2021-06-13 14:57:03,323 INFO input_scaling: 1
+2021-06-13 14:57:03,323 INFO inter_scaling: 1
+2021-06-13 14:57:03,323 INFO radius: 0.81
+2021-06-13 14:57:03,323 INFO leaky: 0.53
+2021-06-13 14:57:03,323 INFO connectivity_recurrent: 10
+2021-06-13 14:57:03,323 INFO connectivity_input: 10
+2021-06-13 14:57:03,323 INFO connectivity_inter: 10
+2021-06-13 14:57:03,323 INFO return_sequences: false
+2021-06-13 14:59:23,153 INFO validation_loss: 0.38254207372665405
+2021-06-13 14:59:38,932 INFO normalized prediction error: 0.12
+2021-06-13 14:59:38,936 INFO Channel Stats: TP: 0  FP: 0  FN: 1
+2021-06-13 14:59:38,936 INFO Total true positives: 63
+2021-06-13 14:59:38,936 INFO Total false positives: 13
+2021-06-13 14:59:38,936 INFO Total false negatives: 39
+
+2021-06-13 14:59:38,943 INFO Stream # 80: D-16
+2021-06-13 14:59:39,156 INFO units: 150
+2021-06-13 14:59:39,156 INFO layers: 1
+2021-06-13 14:59:39,156 INFO concat: false
+2021-06-13 14:59:39,156 INFO input_scaling: 1
+2021-06-13 14:59:39,157 INFO inter_scaling: 1
+2021-06-13 14:59:39,157 INFO radius: 1.0
+2021-06-13 14:59:39,157 INFO leaky: 0.62
+2021-06-13 14:59:39,157 INFO connectivity_recurrent: 10
+2021-06-13 14:59:39,157 INFO connectivity_input: 10
+2021-06-13 14:59:39,157 INFO connectivity_inter: 10
+2021-06-13 14:59:39,157 INFO return_sequences: false
+2021-06-13 15:01:45,152 INFO validation_loss: 0.24559582769870758
+2021-06-13 15:02:01,009 INFO normalized prediction error: 0.14
+2021-06-13 15:02:01,017 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 15:02:01,018 INFO Total true positives: 64
+2021-06-13 15:02:01,018 INFO Total false positives: 13
+2021-06-13 15:02:01,018 INFO Total false negatives: 39
+
+2021-06-13 15:02:01,025 INFO Stream # 81: M-7
+2021-06-13 15:02:01,250 INFO units: 950
+2021-06-13 15:02:01,250 INFO layers: 1
+2021-06-13 15:02:01,250 INFO concat: false
+2021-06-13 15:02:01,250 INFO input_scaling: 1
+2021-06-13 15:02:01,250 INFO inter_scaling: 1
+2021-06-13 15:02:01,250 INFO radius: 0.34
+2021-06-13 15:02:01,250 INFO leaky: 0.72
+2021-06-13 15:02:01,250 INFO connectivity_recurrent: 10
+2021-06-13 15:02:01,251 INFO connectivity_input: 10
+2021-06-13 15:02:01,251 INFO connectivity_inter: 10
+2021-06-13 15:02:01,251 INFO return_sequences: false
+2021-06-13 15:02:47,156 INFO validation_loss: 0.0075778900645673275
+2021-06-13 15:03:03,089 INFO normalized prediction error: 0.03
+2021-06-13 15:03:03,103 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 15:03:03,103 INFO Total true positives: 65
+2021-06-13 15:03:03,103 INFO Total false positives: 13
+2021-06-13 15:03:03,103 INFO Total false negatives: 39
+
+2021-06-13 15:03:03,110 INFO Stream # 82: F-8
+2021-06-13 15:03:03,409 INFO units: 750
+2021-06-13 15:03:03,410 INFO layers: 1
+2021-06-13 15:03:03,410 INFO concat: false
+2021-06-13 15:03:03,410 INFO input_scaling: 1
+2021-06-13 15:03:03,410 INFO inter_scaling: 1
+2021-06-13 15:03:03,410 INFO radius: 1.0
+2021-06-13 15:03:03,410 INFO leaky: 0.57
+2021-06-13 15:03:03,410 INFO connectivity_recurrent: 10
+2021-06-13 15:03:03,410 INFO connectivity_input: 10
+2021-06-13 15:03:03,410 INFO connectivity_inter: 10
+2021-06-13 15:03:03,410 INFO return_sequences: false
+2021-06-13 15:05:32,512 INFO validation_loss: 0.1786274015903473
+2021-06-13 15:05:52,182 INFO normalized prediction error: 0.07
+2021-06-13 15:05:52,201 INFO Channel Stats: TP: 1  FP: 0  FN: 0
+2021-06-13 15:05:52,201 INFO Total true positives: 66
+2021-06-13 15:05:52,201 INFO Total false positives: 13
+2021-06-13 15:05:52,201 INFO Total false negatives: 39
+
+2021-06-13 15:05:52,208 INFO Final Totals:
+2021-06-13 15:05:52,208 INFO -----------------
+2021-06-13 15:05:52,208 INFO True Positives: 66
+2021-06-13 15:05:52,208 INFO False Positives: 13
+2021-06-13 15:05:52,209 INFO False Negatives: 39
+
+2021-06-13 15:05:52,209 INFO Precision: 0.84
+2021-06-13 15:05:52,209 INFO Recall: 0.63

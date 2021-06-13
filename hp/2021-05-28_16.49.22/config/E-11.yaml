@@ -1,0 +1,12 @@
+concat: false
+connectivity_input: 10
+connectivity_inter: 10
+connectivity_recurrent: 10
+input_scaling: 1.0
+inter_scaling: 1.0
+layers: 6
+leaky: 0.9999999999999999
+radius: 0.6
+return_sequences: false
+units: 650
+validation_loss: 0.2918761074542999
