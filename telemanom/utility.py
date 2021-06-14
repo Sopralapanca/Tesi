@@ -1,8 +1,6 @@
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Activation, Dropout
 from telemanom.DeepESN import SimpleDeepReservoirLayer
-from kerastuner.engine.hypermodel import HyperModel
-from kerastuner.tuners import Hyperband
 import tensorflow as tf
 import os
 

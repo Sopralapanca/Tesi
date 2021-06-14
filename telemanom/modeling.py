@@ -47,7 +47,10 @@ class Model:
                 if self.config.model_type == "ESN":
                     hp = {}
                     if self.config.load_hp:
-                        path = os.path.join("hp", self.config.hp_id, "config/{}.yaml".format(self.chan_id))
+                        logger.info('Loading hp id: {}'.format(self.config.hp_and_weights_id))
+                        #metti poi config
+                        #path = os.path.join("hp", self.config.hp_and_weights_id, "config/{}.yaml".format(self.chan_id))
+                        path = os.path.join("hp", self.config.hp_and_weights_id, "{}.yaml".format(self.chan_id))
                         with open(path, 'r') as file:
                             hp = yaml.load(file, Loader=yaml.BaseLoader)
 
@@ -57,7 +60,7 @@ class Model:
                                        optimizer=self.config.optimizer)
 
                     self.model.load_weights(os.path.join('data', self.config.use_id,
-                                                         'models', self.chan_id + '_.h5'))
+                                                         'models', self.chan_id + '.h5'))
 
                 else:
                     self.model = load_model(os.path.join('data', self.config.use_id,
@@ -67,6 +70,8 @@ class Model:
                                     self.chan_id + '.h5')
                 logger.warning('Training new model, couldn\'t find existing '
                                'model at {}'.format(path))
+
+                print("dentro exception: {}".format(e))
                 self.train_new(channel)
                 self.save()
         else:
@@ -234,6 +239,7 @@ class Model:
             raise ValueError('l_s ({}) too large for stream length {}.'
                              .format(self.config.l_s, channel.y_test.shape[0]))
 
+
         # simulate data arriving in batches, predict each batch
         for i in range(0, num_batches + 1):
             prior_idx = i * self.config.batch_size
@@ -246,6 +252,7 @@ class Model:
             X_test_batch = channel.X_test[prior_idx:idx]
             y_hat_batch = self.model.predict(X_test_batch)
             self.aggregate_predictions(y_hat_batch)
+
 
         self.y_hat = np.reshape(self.y_hat, (self.y_hat.size,))
 

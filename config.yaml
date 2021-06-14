@@ -1,6 +1,6 @@
 # Runtime params
 #===================================
-train: True # train new or existing model for each channel
+train: False # train new or existing model for each channel
 predict: True # generate new predicts or, if False, use predictions stored locally
 use_id: "2021-05-27_09.34.59_ESN"
 
@@ -12,7 +12,7 @@ generate_hp: True #se true genera nuovi yaml file
 tune_hp: True # se true fa il tuning di alcuni modelli
 tune_hp_loss: 0.10
 load_hp: True # if True carica i valori per gli iperparametri trovati
-hp_and_weights_id: "2021-06-13_11.17.36" # hyperparameters folder
+hp_and_weights_id: "2021-05-26_18.12.38" # hyperparameters folder
 logs_id: "2021-05-27_09.34.59_ESN" # file dei vecchi log per prendere la loss
 
 save_graphs: True # if True it shows and saves the graphs for loss and validation loss
