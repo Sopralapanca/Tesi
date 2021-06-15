@@ -7,18 +7,12 @@ use_id: "2021-05-27_09.34.59_ESN"
 model_type: "ESN" # neural network type LSTM, CNN, ESN
 
 
-
-generate_hp: True #se true genera nuovi yaml file
-tune_hp: True # se true fa il tuning di alcuni modelli
-tune_hp_loss: 0.10
-load_hp: True # if True carica i valori per gli iperparametri trovati
-hp_and_weights_id: "2021-05-26_18.12.38" # hyperparameters folder
-logs_id: "2021-05-27_09.34.59_ESN" # file dei vecchi log per prendere la loss
+##### da rivedere
+load_hp: True
+hp_and_weights_id: "2021-05-26_18.12.38" # hyperparameters configuration folder
+logs_id: "2021-05-27_09.34.59_ESN"
 
 save_graphs: True # if True it shows and saves the graphs for loss and validation loss
-
-
-
 
 
 # number of values to evaluate in each batch
@@ -71,6 +65,7 @@ n_predictions: 10
 
 # minimum percent decrease between max errors in anomalous sequences (used for pruning)
 p: 0.13
-#provo altri threshold
+
+#altri threshold da provare
 #p: 0.09
 #p: 0.05
