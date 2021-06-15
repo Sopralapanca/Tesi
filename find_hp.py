@@ -259,7 +259,7 @@ for i, row in chan_df.iterrows():
             saved_model = model
 
     hp["units"] = reservoir_units
-    saved_model.save_weights(os.path.join("/hp/{}/weights", '{}_weights.h5'.format(data,channel)))
+    saved_model.save_weights(os.path.join("/hp/{}/weights", '{}_weights.h5'.format(data,row.chan_id)))
 
 
     """
