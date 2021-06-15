@@ -96,9 +96,9 @@ for i, row in chan_df.iterrows():
     channel = Channel(config, row.chan_id)
     channel.load_data()
 
-    input_scaling = create_float_array(0.1, 1, 30)
-    spectral_radius = create_float_array(0.1, 1, 30)
-    leaky = create_float_array(0.1, 1, 30)
+    input_scaling = create_float_array(0.1, 1, 20)
+    spectral_radius = create_float_array(0.1, 1, 20)
+    leaky = create_float_array(0.1, 1, 20)
     units = list(range(50, 1000, 100))
 
     """for elem in input_scaling:
@@ -259,7 +259,7 @@ for i, row in chan_df.iterrows():
             saved_model = model
 
     hp["units"] = reservoir_units
-    saved_model.save_weights(os.path.join("/hp/weights", '{}_weights.h5'.format(channel)))
+    saved_model.save_weights(os.path.join("/hp/{}/weights", '{}_weights.h5'.format(data,channel)))
 
 
     """
