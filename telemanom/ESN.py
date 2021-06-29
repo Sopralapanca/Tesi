@@ -202,17 +202,7 @@ class SimpleESN(keras.Model):
         self.inputs_shape = inputs_shape
         self.config = config
 
-        """self.reservoir = SimpleReservoirLayer(input_shape=(self.inputs_shape),
-                                                  units=units,
-                                                  spectral_radius=spectral_radius, leaky=leaky,
-                                                  input_scaling=input_scaling,
-                                                  connectivity_recurrent=connectivity_recurrent,
-                                                  connectivity_input=connectivity_input,
-                                                  return_sequences=return_sequences)"""
-
-        self.reservoir = Sequential()
-        self.reservoir.add(
-            SimpleReservoirLayer(input_shape=(self.inputs_shape),
+        self.reservoir = SimpleReservoirLayer(input_shape=(self.inputs_shape),
                                                   units=units,
                                                   spectral_radius=spectral_radius, leaky=leaky,
                                                   input_scaling=input_scaling,
@@ -220,10 +210,6 @@ class SimpleESN(keras.Model):
                                                   connectivity_input=connectivity_input,
                                                   return_sequences=return_sequences)
 
-        )
-        self.reservoir.compile(loss=self.config.loss_metric, optimizer=self.config.optimizer)
-
-        #self.masking = tf.keras.layers.Masking()
 
 
         self.readout = Sequential()
@@ -231,7 +217,6 @@ class SimpleESN(keras.Model):
         self.readout.compile(loss=self.config.loss_metric, optimizer=self.config.optimizer)
 
     def call(self, inputs):
-        #m = self.masking(inputs)
         r = self.reservoir(inputs)
         y = self.readout(r)
         return y
