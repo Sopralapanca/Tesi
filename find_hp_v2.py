@@ -42,7 +42,7 @@ class MyHyperModel(HyperModel):
     def build(self, hp):
         model = SimpleESN(inputs_shape=(None, self.X_train.shape[2]),
                           config=self.config,
-                          units=hp.Int("units", 50, 350, 50),
+                          units=hp.Int("units", 50, 700, 50),
                           input_scaling=hp.Float("input_scaling", 0.1, 1, 0.15),
                           spectral_radius=hp.Float("spectral_radius", 0.1, 1.10, 0.10),
                           leaky=hp.Float("leaky", 0.1, 1, 0.15),

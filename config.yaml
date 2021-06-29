@@ -1,16 +1,18 @@
 # Runtime params
 #===================================
-train: False # train new or existing model for each channel
-predict: True # generate new predicts or, if False, use predictions stored locally
-use_id: "2021-05-27_09.34.59_ESN"
+train: True # train new or existing model for each channel
+predict: False # generate new predicts or, if False, use predictions stored locally
+train_only: True # if true esegue solo il training dei modelli
+use_id: ""
 
 model_type: "ESN" # neural network type LSTM, CNN, ESN
 
 
 ##### da rivedere
-load_hp: True
-hp_and_weights_id: "2021-05-26_18.12.38" # hyperparameters configuration folder
+load_hp: True #if true carica  dal file di configurazione gli iperparametri
+hp_id: "2021-06-29_10.39.53" # hyperparameters configuration folder
 logs_id: "2021-05-27_09.34.59_ESN"
+
 resume_hp_search: False # if true bla bla bla
 hp_search_id: "2021-06-29_10.39.53" # rivedere
 

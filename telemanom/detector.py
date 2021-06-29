@@ -57,7 +57,7 @@ class Detector:
         if not self.config.train and self.config.predict:
             self.id = self.config.use_id
 
-        if not self.config.predict and self.config.use_id:
+        if not self.config.predict and not self.config.train_only:
             self.id = self.config.use_id
 
         if self.config.train:
@@ -203,6 +203,10 @@ class Detector:
             logger.info('Stream # {}: {}'.format(i+1, row.chan_id))
             channel = Channel(self.config, row.chan_id)
             channel.load_data()
+
+            if self.config.train_only:
+                model = Model(self.config, self.id, channel)
+                continue
 
             if self.config.predict:
                 model = Model(self.config, self.id, channel)

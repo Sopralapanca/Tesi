@@ -3,6 +3,7 @@ import yaml
 from tensorflow.keras.models import load_model
 from tensorflow.keras.callbacks import History, EarlyStopping
 import tensorflow as tf
+import sys
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -41,7 +42,7 @@ class Model:
         self.y_hat = np.array([])
         self.model = None
 
-        if not self.config.train:
+        if not self.config.train and not self.config.train_only:
             try:
                 logger.info('Loading pre-trained model')
                 if self.config.model_type == "ESN":
@@ -74,7 +75,12 @@ class Model:
                 print("dentro exception: {}".format(e))
                 self.train_new(channel)
                 self.save()
-        else:
+
+        if not self.config.train and self.config.train_only:
+            logger.info("error in the configuration file, check the flags")
+            sys.exit("error in the configuration file, check the flags")
+
+        if self.config.train and self.config.train_only:
             self.train_new(channel)
             self.save()
 
@@ -117,38 +123,22 @@ class Model:
 
             hp = {}
             if self.config.load_hp:
-                path = os.path.join("hp",self.config.hp_and_weights_id, "config/{}.yaml".format(self.chan_id))
+                path = os.path.join("hp",self.config.hp_id, "config/{}.yaml".format(self.chan_id))
                 with open(path, 'r') as file:
                     hp = yaml.load(file, Loader=yaml.BaseLoader)
 
                 logger.info('units: {}'.format(hp["units"]))
-                logger.info('layers: {}'.format(hp["layers"]))
-                logger.info('concat: {}'.format(hp["concat"]))
                 logger.info('input_scaling: {}'.format(hp["input_scaling"]))
-                logger.info('inter_scaling: {}'.format(hp["inter_scaling"]))
                 logger.info('radius: {}'.format(hp["radius"]))
                 logger.info('leaky: {}'.format(hp["leaky"]))
                 logger.info('connectivity_recurrent: {}'.format(hp["connectivity_recurrent"]))
                 logger.info('connectivity_input: {}'.format(hp["connectivity_input"]))
-                logger.info('connectivity_inter: {}'.format(hp["connectivity_inter"]))
                 logger.info('return_sequences: {}'.format(hp["return_sequences"]))
             else:
                 logger.info("default hp".format(self.config.model_type))
 
             self.model = create_esn_model(channel,self.config, hp)
 
-            self.model.compile(loss=self.config.loss_metric,
-                               optimizer=self.config.optimizer)
-
-            if self.config.load_hp:
-                path = os.path.join('hp', self.config.hp_and_weights_id,'weights', self.chan_id + '_weights.h5')
-                try:
-                    print("loading weights")
-                    self.model.load_weights(path)
-
-                except (FileNotFoundError, OSError) as e:
-                    logger.warning('Training new model, couldn\'t find existing '
-                                   'weights at {}. Exception: {}'.format(path, e))
 
             self.history = self.model.fit(channel.X_train,
                                           channel.y_train,
