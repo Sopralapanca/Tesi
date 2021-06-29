@@ -31,6 +31,7 @@ def create_esn_model(channel,config, hp):
     else:
         model.add(SimpleDeepReservoirLayer(input_shape=(None, channel.X_train.shape[2]),
                                            units=int(hp["units"]),
+                                           #fissare return sequences a false
                                            return_sequences=(hp["return_sequences"] == 'true'),
                                            layers=int(hp["layers"]),
                                            concat=hp["concat"] == 'true',
@@ -45,6 +46,6 @@ def create_esn_model(channel,config, hp):
                   )
 
     model.add(Dense(config.n_predictions))
-    model.add(Activation('linear'))
+    #model.add(Activation('linear'))
 
     return model

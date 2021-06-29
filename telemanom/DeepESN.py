@@ -210,10 +210,10 @@ class SimpleDeepReservoirLayer(keras.layers.Layer):
     # return_sequences - if True, the state is returned for each time step, otherwise only for the last time step
 
 
-    def __init__(self, units=100, layers=1, concat=True,
+    def __init__(self, units=100, layers=1, concat=False,
                  input_scaling=1, inter_scaling=1,
                  spectral_radius=0.99, leaky=1,
-                 connectivity_recurrent=1,
+                 connectivity_recurrent=10,
                  connectivity_input=10,
                  connectivity_inter=10,
                  return_sequences=False,

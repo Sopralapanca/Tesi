@@ -30,7 +30,7 @@ def create_float_array(min, max, elems):
 
 def modeling(model):
     model.add(Dense(config.n_predictions))
-    model.add(Activation('linear'))
+    #model.add(Activation('linear'))
 
     model.compile(loss=config.loss_metric,
                   optimizer=config.optimizer)

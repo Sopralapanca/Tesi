@@ -11,6 +11,9 @@ model_type: "ESN" # neural network type LSTM, CNN, ESN
 load_hp: True
 hp_and_weights_id: "2021-05-26_18.12.38" # hyperparameters configuration folder
 logs_id: "2021-05-27_09.34.59_ESN"
+resume_hp_search: True # if true bla bla bla
+hp_search_id: "2021-06-29_10.39.53" # rivedere
+
 
 save_graphs: True # if True it shows and saves the graphs for loss and validation loss
 
