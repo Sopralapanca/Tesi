@@ -7,7 +7,7 @@ import random
 
 SEED = 42
 
-os.environ['PYTHONHASHSEED']=str(SEED)
+os.environ['PYTHONHASHSEED'] = str(SEED)
 os.environ['TF_CUDNN_DETERMINISTIC'] = '1'
 
 
@@ -87,6 +87,7 @@ class ReservoirCell(keras.layers.Layer):
                  connectivity_input=10, connectivity_recurrent=10,
                  **kwargs):
 
+        print("init custom cell")
         self.units = units
         self.state_size = units
         self.input_scaling = input_scaling
@@ -156,6 +157,9 @@ class SimpleReservoirLayer(keras.layers.Layer):
                  **kwargs):
 
         super().__init__(**kwargs)
+
+        print("init custom layer")
+
         self.units = units
 
         self.reservoir = keras.layers.RNN(ReservoirCell(units=units,
@@ -171,14 +175,53 @@ class SimpleReservoirLayer(keras.layers.Layer):
 
     def call(self, inputs):
         # compute the output of the reservoir
+        print("call custom layer")
 
         X = inputs  # external input
         layer_states, layer_states_last = self.reservoir(X)
+        print("call custom layer after reservoir")
 
         if self.return_sequences:
+
+            x = tf.io.serialize_tensor(layer_states)
+            record_file = 'layer_states.tfrecord'
+            with tf.io.TFRecordWriter(record_file) as writer:
+                # Get value with .numpy()
+                writer.write(x.numpy())
+
+
+            """# Read from file
+            parse_tensor_f32 = lambda x: tf.io.parse_tensor(x, tf.float32)
+            ds = (tf.data.TFRecordDataset('temp.tfrecord')
+                  .map(parse_tensor_f32))
+            for x3 in ds:
+                tf.print(x3)"""
+
+
+            """x = layer_states_last.numpy()
+            #x = layer_states.eval(session=tf.compat.v1.Session())
+            print("saving")
+            np.save("tmp1.npy", x)"""
+
+            #solo questo serve
             # all the time steps for the last layer
             return layer_states
         else:
+            """x = tf.make_ndarray(layer_states_last)
+
+
+            #x = layer_states_last.numpy()
+            #x = layer_states_last.eval(session=tf.compat.v1.Session())
+            print("saving")
+            np.save("tmp1.npy", x)"""
+
+            x = tf.io.serialize_tensor(layer_states_last)
+            record_file = 'layer_states_last.tfrecord'
+            with tf.io.TFRecordWriter(record_file) as writer:
+                # Get value with .numpy()
+                writer.write(x.numpy())
+
+            #solo questo serve
             # the last time step for the last layer
             return layer_states_last
 
@@ -191,9 +234,13 @@ class SimpleESN(keras.Model):
                  connectivity_recurrent=1,
                  connectivity_input=10,
                  return_sequences=False,
-
+                 datset_size=0,
+                 train_size=0,
+                 valid_size=0,
                  **kwargs):
         super().__init__(**kwargs)
+
+        print("init custom model")
 
         random.seed(SEED)
         np.random.seed(SEED)
@@ -202,25 +249,61 @@ class SimpleESN(keras.Model):
         self.inputs_shape = inputs_shape
         self.config = config
 
-        self.reservoir = SimpleReservoirLayer(input_shape=(self.inputs_shape),
-                                                  units=units,
-                                                  spectral_radius=spectral_radius, leaky=leaky,
-                                                  input_scaling=input_scaling,
-                                                  connectivity_recurrent=connectivity_recurrent,
-                                                  connectivity_input=connectivity_input,
-                                                  return_sequences=return_sequences)
+        self.datset_size = datset_size
+        self.train_size = train_size
+        self.valid_size = valid_size
 
+        """self.reservoir = SimpleReservoirLayer(input_shape=(self.inputs_shape),
+                                              units=units,
+                                              spectral_radius=spectral_radius, leaky=leaky,
+                                              input_scaling=input_scaling,
+                                              connectivity_recurrent=connectivity_recurrent,
+                                              connectivity_input=connectivity_input,
+                                              return_sequences=return_sequences)"""
 
+        self.reservoir = Sequential()
+        self.reservoir.add(SimpleReservoirLayer(input_shape=(self.inputs_shape),
+                                                units=units,
+                                                spectral_radius=spectral_radius, leaky=leaky,
+                                                input_scaling=input_scaling,
+                                                connectivity_recurrent=connectivity_recurrent,
+                                                connectivity_input=connectivity_input,
+                                                return_sequences=return_sequences)
+                           )
+
+        self.reservoir.compile(loss=config.loss_metric, optimizer=config.optimizer)
 
         self.readout = Sequential()
         self.readout.add(tf.keras.layers.Dense(self.config.n_predictions))
         self.readout.compile(loss=self.config.loss_metric, optimizer=self.config.optimizer)
 
     def call(self, inputs):
+        print("call reservoir custom model")
         r = self.reservoir(inputs)
+        print("call readout custom model")
         y = self.readout(r)
         return y
 
     def fit(self, x, y, **kwargs):
+        print("dentro fit prima del reservoir")
         x_train_1 = self.reservoir(x)
-        return self.readout.fit(x_train_1, y, **kwargs)
+        print("dentro fit dopo il reservoir")
+        # x_train_1 = np.load('/tmp1.npy')
+
+        x_train_dataset = tf.data.Dataset.from_tensor_slices((x_train_1, y))
+
+        train_dataset = x_train_dataset.take(self.train_size)
+        val_dataset = x_train_dataset.skip(self.train_size)
+
+        print("train dataset", len(train_dataset))
+        print("val dataset", len(val_dataset))
+        print(train_dataset)
+        print(val_dataset)
+
+        value = kwargs.pop('validation_split')
+
+        # x_train_1 = self.reservoir(x)
+        print("nel fit del modello ritorno il fit sul readout")
+        return self.readout.fit(train_dataset, validation_data=val_dataset, **kwargs)
+
+        # return self.readout.fit(x_train_1, y, **kwargs)
