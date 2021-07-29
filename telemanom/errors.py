@@ -68,7 +68,8 @@ class Errors:
                 np.array(self.e_s))
 
         self.normalized = np.mean(self.e / np.ptp(channel.y_test))
-        logger.info("normalized prediction error: {0:.2f}"
+        if self.config.execution != "search_p":
+            logger.info("normalized prediction error: {0:.2f}"
                     .format(self.normalized))
 
     def adjust_window_size(self, channel):

@@ -1,7 +1,0 @@
-connectivity_input: 10
-connectivity_recurrent: 10
-input_scaling: 0.5499999999999999
-leaky: 0.85
-radius: 0.5
-return_sequences: false
-units: 350

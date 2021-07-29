@@ -1,6 +1,7 @@
 import numpy as np
 import os
 import logging
+from sklearn.model_selection import train_test_split
 
 logger = logging.getLogger('telemanom')
 
@@ -33,6 +34,8 @@ class Channel:
         self.config = config
         self.X_train = None
         self.y_train = None
+        self.X_valid = None
+        self.y_valid = None
         self.X_test = None
         self.y_test = None
         self.y_hat = None
@@ -40,7 +43,7 @@ class Channel:
         self.test = None
 
     def shape_data(self, arr, train=True):
-        """Shape raw input streams for ingestion into LSTM. config.l_s specifies
+        """Shape raw input streams for ingestion into LSTM or ESN. config.l_s specifies
         the sequence length of prior timesteps fed into the model at
         each timestep t.
 
@@ -66,6 +69,13 @@ class Channel:
             self.X_test = data[:, :-self.config.n_predictions, :]
             self.y_test = data[:, -self.config.n_predictions:, 0]  # telemetry value is at position 0
 
+
+
+        # we create train and validation set
+        self.X_train, self.X_valid, self.y_train, self.y_valid = train_test_split(self.X_train,
+                                                                                  self.y_train,
+                                                                                  test_size=self.config.validation_split,
+                                                                                  random_state=42)
     def load_data(self):
         """
         Load train and test data from local.

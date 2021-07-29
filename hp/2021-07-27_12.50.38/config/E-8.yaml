@@ -1,0 +1,5 @@
+connectivity_input: 10
+input_scaling: 0.50
+leaky: 0.90
+radius: 1.10
+units: 600

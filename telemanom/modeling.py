@@ -2,7 +2,6 @@ import yaml
 
 from tensorflow.keras.models import load_model
 from tensorflow.keras.callbacks import History, EarlyStopping
-import tensorflow as tf
 import sys
 
 import matplotlib.pyplot as plt
@@ -10,10 +9,31 @@ import numpy as np
 import os
 import logging
 from telemanom.utility import create_lstm_model, create_esn_model
+import random
 
 # suppress tensorflow CPU speedup warnings
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 logger = logging.getLogger('telemanom')
+
+def get_seed(folder, chan_id):
+    path = f'./data/{folder}/models/seeds.log'
+    file1 = open(path, 'r')
+    seed = 0
+    while True:
+        line = file1.readline()
+        # if line is empty end of file is reached
+        if not line:
+            break
+
+        strings = line.strip().split(" ")
+        channel_id = strings[0]
+        seed = int(strings[1])
+
+        if channel_id == chan_id:
+            break
+
+    file1.close()
+    return seed
 
 
 class Model:
@@ -42,26 +62,29 @@ class Model:
         self.y_hat = np.array([])
         self.model = None
 
-        if not self.config.train and not self.config.train_only:
+        #da sistemare pure questa
+        #if not self.config.train and not self.config.train_only:
+        if self.config.execution == "predict":
             try:
                 logger.info('Loading pre-trained model')
-                if self.config.model_type == "ESN":
+                if self.config.model_architecture == "ESN":
                     hp = {}
                     if self.config.load_hp:
-                        logger.info('Loading hp id: {}'.format(self.config.hp_and_weights_id))
-                        #metti poi config
-                        #path = os.path.join("hp", self.config.hp_and_weights_id, "config/{}.yaml".format(self.chan_id))
-                        path = os.path.join("hp", self.config.hp_and_weights_id, "{}.yaml".format(self.chan_id))
+                        logger.info('Loading hp id: {}'.format(self.config.hp_research_id))
+                        path = "./hp/{}/config/{}.yaml".format(self.config.hp_research_id,self.chan_id)
                         with open(path, 'r') as file:
                             hp = yaml.load(file, Loader=yaml.BaseLoader)
 
-                    self.model = create_esn_model(channel, self.config, hp)
+                    # get seed for that model
+                    seed = get_seed(self.config.use_id, self.chan_id)
 
-                    self.model.compile(loss=self.config.loss_metric,
-                                       optimizer=self.config.optimizer)
+
+                    self.model = create_esn_model(channel, self.config, hp, seed)
 
                     self.model.load_weights(os.path.join('data', self.config.use_id,
                                                          'models', self.chan_id + '.h5'))
+
+
 
                 else:
                     self.model = load_model(os.path.join('data', self.config.use_id,
@@ -71,18 +94,18 @@ class Model:
                                     self.chan_id + '.h5')
                 logger.warning('Training new model, couldn\'t find existing '
                                'model at {}'.format(path))
+                raise e
 
-                print("dentro exception: {}".format(e))
                 self.train_new(channel)
                 self.save()
 
-        if not self.config.train and self.config.train_only:
-            logger.info("error in the configuration file, check the flags")
-            sys.exit("error in the configuration file, check the flags")
-
-        if self.config.train and self.config.train_only:
+        elif self.config.execution == "train" or self.config.execution == "train_and_predict":
             self.train_new(channel)
             self.save()
+
+        else:
+            logger.info("Configuration file error, check execution flag")
+            sys.exit("Configuration file error, check execution flag")
 
 
     def train_new(self, channel):
@@ -96,26 +119,25 @@ class Model:
 
 
 
-        if self.config.model_type == "LSTM":
+        if self.config.model_architecture == "LSTM":
             cbs = [History(), EarlyStopping(monitor='val_loss',
                                             patience=self.config.patience,
                                             min_delta=self.config.min_delta,
                                             verbose=0)]
 
             self.model = create_lstm_model(channel,self.config)
-            self.model.compile(loss=self.config.loss_metric,
-                               optimizer=self.config.optimizer)
+
 
             self.history = self.model.fit(channel.X_train,
                                           channel.y_train,
                                           batch_size=self.config.lstm_batch_size,
                                           epochs=self.config.epochs,
-                                          validation_split=self.config.validation_split,
+                                          validation_data=(channel.X_valid, channel.y_valid),
                                           callbacks=cbs,
                                           verbose=True)
 
 
-        if self.config.model_type == "ESN":
+        if self.config.model_architecture == "ESN":
             cbs = [History(), EarlyStopping(monitor='val_loss',
                                             patience=self.config.esn_patience,
                                             min_delta=self.config.min_delta,
@@ -123,38 +145,38 @@ class Model:
 
             hp = {}
             if self.config.load_hp:
-                path = os.path.join("hp",self.config.hp_id, "config/{}.yaml".format(self.chan_id))
-                with open(path, 'r') as file:
-                    hp = yaml.load(file, Loader=yaml.BaseLoader)
+                path = os.path.join("hp",self.config.hp_research_id, "config", "{}.yaml".format(self.chan_id))
+                try:
+                    with open(path, 'r') as file:
+                        hp = yaml.load(file, Loader=yaml.BaseLoader)
 
-                logger.info('units: {}'.format(hp["units"]))
-                logger.info('input_scaling: {}'.format(hp["input_scaling"]))
-                logger.info('radius: {}'.format(hp["radius"]))
-                logger.info('leaky: {}'.format(hp["leaky"]))
-                logger.info('connectivity_recurrent: {}'.format(hp["connectivity_recurrent"]))
-                logger.info('connectivity_input: {}'.format(hp["connectivity_input"]))
-                logger.info('return_sequences: {}'.format(hp["return_sequences"]))
+
+                    logger.info('units: {}'.format(hp["units"]))
+                    logger.info('input_scaling: {}'.format(hp["input_scaling"]))
+                    logger.info('radius: {}'.format(hp["radius"]))
+                    logger.info('leaky: {}'.format(hp["leaky"]))
+                    logger.info('connectivity_input: {}'.format(hp["connectivity_input"]))
+                except FileNotFoundError as e:
+                    logger.info("No configuration file at {} using default hypeparameters".format(path))
             else:
-                logger.info("default hp".format(self.config.model_type))
+                logger.info("default hp".format(self.config.model_architecture))
 
-            self.model = create_esn_model(channel,self.config, hp)
+            if self.config.execution == "train":
+                SEED=42
+            else:
+                SEED = random.randint(43, 999999999)
+
+            self.model = create_esn_model(channel,self.config, hp, SEED)
 
 
             self.history = self.model.fit(channel.X_train,
                                           channel.y_train,
-                                          batch_size=self.config.lstm_batch_size,
                                           epochs=self.config.esn_epochs,
-                                          validation_split=self.config.validation_split,
+                                          validation_data=(channel.X_valid, channel.y_valid),
                                           callbacks=cbs,
                                           verbose=True)
 
-
-        if self.config.model_type == "CNN":
-            pass
-
-
-
-        logger.info('validation_loss: {}'.format(self.history.history["val_loss"][-1]))
+        logger.info('validation_loss: {}\n'.format(self.history.history["val_loss"][-1]))
 
     def save(self):
         """
@@ -165,18 +187,25 @@ class Model:
             plt.figure()
             plt.plot(self.history.history["loss"], label="Training Loss")
             plt.plot(self.history.history["val_loss"], label="Validation Loss")
-            plt.title(f'Training and validation loss model: {self.config.model_type} channel: {self.chan_id}')
+            plt.title(f'Training and validation loss model: {self.config.model_architecture} channel: {self.chan_id}')
 
             plt.legend()
 
             plt.savefig(os.path.join('data', self.run_id, 'images',
                                      '{}_loss.png'.format(self.chan_id)))
-            plt.show()
+            #plt.show()
             plt.close()
 
-        if self.config.model_type == "ESN":
+        if self.config.model_architecture == "ESN":
             self.model.save_weights(os.path.join('data', self.run_id, 'models',
                                          '{}.h5'.format(self.chan_id)))
+            #saving seeds
+            path = './data/{}/models/seeds.log'.format(self.run_id)
+            f = open(path, "a")
+            f.write("{} {}\n".format(self.chan_id, self.model.SEED))
+            f.close()
+
+
         else:
             self.model.save(os.path.join('data', self.run_id, 'models',
                                          '{}.h5'.format(self.chan_id)))

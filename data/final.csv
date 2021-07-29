@@ -1,0 +1,3 @@
+,Model,Precision,Recall,True Positives,False Positives,False Negatives,Training Time,Params
+0,LSTM,0.80,0.78,82,20,23,0h:48m:09s,"86,250"
+1,ESN,0.80,0.70,74,19,31,0h:21m:55s,"2,000-9,000"

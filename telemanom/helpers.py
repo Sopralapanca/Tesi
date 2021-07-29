@@ -15,6 +15,7 @@ class Config:
 
     def __init__(self, path_to_config):
 
+        self.execution = None
         self.path_to_config = path_to_config
 
         if os.path.isfile(path_to_config):
@@ -50,11 +51,21 @@ def make_dirs(_id):
 
     config = Config("config.yaml")
 
-    if not config.train or not config.predict:
-        if not os.path.isdir('data/%s' %config.use_id):
+    #if not config.train or not config.predict:
+    if config.execution == "predict" or config.execution == "search_p":
+        if not os.path.isdir('data/%s' %config.use_id) or config.use_id == "":
             raise ValueError("Run ID {} is not valid. If loading prior models or predictions, must provide valid ID.".format(_id))
 
-    paths = ['data', 'data/%s' %_id, 'data/logs', 'data/%s/images' %_id, 'data/%s/models' %_id, 'data/%s/smoothed_errors' %_id, 'data/%s/y_hat' %_id,
+    if config.execution == "find_hp":
+        if config.resume_hp_search:
+            if not os.path.isdir('hp/%s' %config.hp_research_id) or config.hp_research_id == "":
+                raise ValueError(
+                    "Run ID {} is not valid. If resuming prior hyperparameters search, must provide valid ID."
+                        .format(_id))
+        paths = ['hp', 'hp/%s' % _id, 'hp/%s/config' % _id, 'hp/%s/kerastuner' % _id]
+
+    if config.execution != "find_hp":
+        paths = ['data', 'data/%s' %_id, 'data/logs', 'data/%s/images' %_id, 'data/%s/models' %_id, 'data/%s/smoothed_errors' %_id, 'data/%s/y_hat' %_id,
              'hp']
 
     for p in paths:

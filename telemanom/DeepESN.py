@@ -19,7 +19,6 @@ https://doi.org/10.1016/j.neucom.2016.12.08924.
 
 import tensorflow as tf
 from tensorflow import keras
-from tensorflow.keras.layers import LayerNormalization
 import numpy as np
 import random
 import os
@@ -28,6 +27,9 @@ SEED = 42
 
 os.environ['PYTHONHASHSEED']=str(SEED)
 os.environ['TF_CUDNN_DETERMINISTIC'] = '1'
+random.seed(SEED)
+np.random.seed(SEED)
+tf.random.set_seed(SEED)
 
 
 def sparse_eye(M):
@@ -220,10 +222,6 @@ class SimpleDeepReservoirLayer(keras.layers.Layer):
                  **kwargs):
 
         super().__init__(**kwargs)
-
-        random.seed(SEED)
-        np.random.seed(SEED)
-        tf.random.set_seed(SEED)
 
         self.layers = layers
         self.units = units
