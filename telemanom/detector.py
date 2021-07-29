@@ -26,7 +26,6 @@ def plotting_p(precision=None, recall=None, p=None, focus=False, run_id="",
     ax.scatter(precision, recall, s=150, label='p value')
 
 
-
     if focus:
         xoffset = 0.40
         switch = -0.6
@@ -177,7 +176,7 @@ class Detector:
             name = self.config.name
             self.id = "{}_{}_{}".format(architecture, name, dt.now().strftime('%Y-%m-%d_%H.%M.%S'), architecture)
 
-        # load existing models
+        # load existing models or predictions
         if self.config.execution == "predict" or self.config.execution == "search_p":
             self.id = self.config.use_id
 
