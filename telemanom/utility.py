@@ -1,4 +1,5 @@
 from tensorflow.keras.models import Sequential
+import tensorflow as tf
 from tensorflow.keras.layers import LSTM, Dense, Activation, Dropout
 from telemanom.ESN import SimpleESN
 import random
@@ -9,7 +10,7 @@ def create_lstm_model(channel,config):
     model.add(LSTM(
         config.layers[0],
         input_shape=(None, channel.X_train.shape[2]),
-        return_sequences=True))
+        return_sequences=False))
     model.add(Dropout(config.dropout))
 
     model.add(LSTM(
@@ -41,7 +42,10 @@ def create_esn_model(channel,config, hp, seed):
                           )
 
     model.build(input_shape=(channel.X_train.shape[0],channel.X_train.shape[1],channel.X_train.shape[2]))
+    """model.compile(loss=config.loss_metric,
+                  optimizer=tf.keras.optimizers.Adam(learning_rate=hp["learning_rate"]))"""
     model.compile(loss=config.loss_metric,
                   optimizer=config.optimizer)
+
 
     return model

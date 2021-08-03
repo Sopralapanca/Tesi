@@ -19,15 +19,17 @@ class MyHyperModel(HyperModel):
         model = SimpleESN(config=self.config,
                           units=hp.Int("units", 100, 1000, 100),
                           input_scaling=hp.Float("input_scaling", 0.5, 1, 0.10),
-                          spectral_radius=hp.Float("spectral_radius", 0.1, 1.10, 0.10),
+                          spectral_radius=hp.Choice("spectral_radius",
+                                                    [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 0.99]),
                           leaky=hp.Float("leaky", 0.1, 1, 0.10),
                           SEED=42
                           )
 
         model.build(input_shape=(self.channel.X_train.shape[0], self.channel.X_train.shape[1], self.channel.X_train.shape[2]))
+        hp_learning_rate = hp.Choice('learning_rate', values=[1e-2, 1e-3, 1e-4])
 
         model.compile(loss=self.config.loss_metric,
-                      optimizer=self.config.optimizer)
+                      optimizer=tf.keras.optimizers.Adam(learning_rate=hp_learning_rate))
 
         return model
 
@@ -62,7 +64,7 @@ class FindHP():
         tuner.search(self.channel.X_train,
                      self.channel.y_train,
                      batch_size=self.config.esn_batch_number,
-                     epochs=5,
+                     epochs=10,
                      validation_data=(self.channel.X_valid, self.channel.y_valid),
                      verbose=1
                      )
@@ -74,7 +76,7 @@ class FindHP():
         hp["input_scaling"] = float("{:.2f}".format(best_hps.get('input_scaling')))
         hp["radius"] = float("{:.2f}".format(best_hps.get('spectral_radius')))
         hp["leaky"] = float("{:.2f}".format(best_hps.get('leaky')))
-
+        hp["learning_rate"] = float(format(best_hps.get('learning_rate')))
         f = open(f'./hp/{self.id}/config/{self.channel.id}.yaml', "w")
 
         yaml.dump(hp, f, default_flow_style=False)

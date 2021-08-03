@@ -13,7 +13,7 @@ import telemanom.helpers as helpers
 from telemanom.channel import Channel
 from telemanom.modeling import Model
 from telemanom.find_hp import FindHP
-
+from telemanom.ROCcurve import roc_curve
 from pathlib import Path
 import shutil
 from functools import reduce
@@ -27,7 +27,7 @@ def plotting_p(precision=None, recall=None, p=None, focus=False, run_id="",
 
 
     if focus:
-        xoffset = 0.40
+        xoffset = 0.30
         switch = -0.6
         bbox_props = dict(boxstyle="round", fc="w", ec="0.5", alpha=0.9)
         ax.scatter(precision2, recall2, s=180, color='red', label='best p values')
@@ -42,7 +42,8 @@ def plotting_p(precision=None, recall=None, p=None, focus=False, run_id="",
     for i, txt in enumerate(p):
         if focus:
             if p[i] in p2.to_list():
-                txt = "p: " + str(txt) + "\nrecall: {0:.2f}\nprecision: {0:.2f}".format(recall[i], precision[i])
+                txt = "p: " + str(txt) + "\nrecall: {0:.2f}\n".format(recall[i])
+                txt = txt + "precision: {0:.2f}".format(precision[i])
 
                 ax.annotate(txt, (precision[i], recall[i]), size=15,
                             xytext=(precision[i], recall[i] + switch * xoffset),
@@ -164,7 +165,8 @@ class Detector:
         self.result_tracker = {
             'true_positives': 0,
             'false_positives': 0,
-            'false_negatives': 0
+            'false_negatives': 0,
+            'true_negatives': 0
         }
 
         self.config = Config(config_path)
@@ -226,6 +228,7 @@ class Detector:
         result_row = {
             'false_positives': 0,
             'false_negatives': 0,
+            'true_negatives': 0,
             'true_positives': 0,
             'fp_sequences': [],
             'tp_sequences': [],
@@ -237,6 +240,21 @@ class Detector:
         label_row['anomaly_sequences'] = eval(label_row['anomaly_sequences'])
         result_row['num_true_anoms'] += len(label_row['anomaly_sequences'])
         result_row['scores'] = errors.anom_scores
+
+        #numero veri negativi per ogni riga
+
+        idx = label_row['anomaly_sequences']
+        if idx[0][0] > 0 and idx[-1][-1] < label_row['num_values']:
+            total_negatives = len(label_row['anomaly_sequences']) +1
+
+        elif  idx[0][0] > 0:
+            total_negatives = len(label_row['anomaly_sequences'])
+        elif idx[-1][-1] < label_row['num_values']:
+            total_negatives = len(label_row['anomaly_sequences'])
+        else:
+            total_negatives = len(label_row['anomaly_sequences']) -1
+
+
 
         if len(errors.E_seq) == 0:
             result_row['false_negatives'] = result_row['num_true_anoms']
@@ -269,10 +287,21 @@ class Detector:
             result_row["false_negatives"] = len(np.delete(label_row['anomaly_sequences'],
                                                           matched_true_seqs, axis=0))
 
+        #in result[fp_sequences] trovo gli indici delle sequenze che dovevano essere negative ma sono stare classificate in modo errato
+        if total_negatives == 0:
+            print("non ho trovato true negatives")
+        n_fp = len(result_row['fp_sequences'])
+        row_true_negative = total_negatives - n_fp
+        if row_true_negative <0:
+            row_true_negative = 0
+        result_row['true_negatives'] = row_true_negative
+
+
         if self.config.execution != "search_p":
-            logger.info('Channel Stats: TP: {}  FP: {}  FN: {}'.format(result_row['true_positives'],
+            logger.info('Channel Stats: TP: {}  FP: {}  FN: {} TN: {}'.format(result_row['true_positives'],
                                                                    result_row['false_positives'],
-                                                                   result_row['false_negatives']))
+                                                                   result_row['false_negatives'],
+                                                                   result_row['true_negatives']))
 
         for key, value in result_row.items():
             if key in self.result_tracker:
@@ -295,8 +324,10 @@ class Detector:
                         .format(self.result_tracker['true_positives']))
             logger.info('False Positives: {}'
                         .format(self.result_tracker['false_positives']))
-            logger.info('False Negatives: {}\n'
+            logger.info('False Negatives: {}'
                         .format(self.result_tracker['false_negatives']))
+            logger.info('True Negatives: {}\n'
+                        .format(self.result_tracker['true_negatives']))
             try:
                 self.precision = float(self.result_tracker['true_positives']) / (float(self.result_tracker['true_positives'] + self.result_tracker['false_positives']))
                 self.recall = float(self.result_tracker['true_positives']) / (float(self.result_tracker['true_positives'] + self.result_tracker['false_negatives']))
@@ -344,8 +375,9 @@ class Detector:
 
 
         for i, row in self.chan_df.iterrows():
-            if self.config.execution != "search_p":
+            if self.config.execution != "search_p" and self.config.execution != "find_hp":
                 logger.info('Stream # {}: {}'.format(i + 1, row.chan_id))
+
 
             channel = Channel(self.config, row.chan_id)
             channel.load_data()
@@ -356,6 +388,8 @@ class Detector:
 
             elif self.config.execution == "find_hp":
                 if self.config.resume_hp_search:
+                    print("provo", row.chan_id)
+                    print(self.channels_time_dict)
                     try:
                         training_end_time = self.channels_time_dict[row.chan_id]
                         training_times_row[row.chan_id] = training_end_time
@@ -364,6 +398,7 @@ class Detector:
                         # in case the execution of the program was interrupted before the time was saved
                         # remove the folder and rerun the search for the hyperparameters
                         dirpath = Path(f'/hp/{self.id}/kerastuner/{row.chan_id}')
+
                         if dirpath.exists() and dirpath.is_dir():
                             shutil.rmtree(dirpath)
 
@@ -421,6 +456,7 @@ class Detector:
                                                      '{}.npy'
                                                      .format(channel.id)))
 
+
             errors = Errors(channel, self.config, self.id)
             errors.process_batches(channel)
             if self.config.execution == "search_p":
@@ -457,8 +493,10 @@ class Detector:
                                 .format(self.result_tracker['true_positives']))
                     logger.info('Total false positives: {}'
                                 .format(self.result_tracker['false_positives']))
-                    logger.info('Total false negatives: {}\n'
+                    logger.info('Total false negatives: {}'
                                 .format(self.result_tracker['false_negatives']))
+                    logger.info('Total true negatives: {}\n'
+                                .format(self.result_tracker['true_negatives']))
 
             else:
                 result_row['anomaly_sequences'] = errors.E_seq
@@ -474,10 +512,11 @@ class Detector:
                     logger.info('anomaly scores: {}\n'
                                 .format(result_row['anom_scores']))
 
-            self.result_df = pd.DataFrame(self.results)
-            self.result_df.to_csv(
-                os.path.join(self.result_path, '{}.csv'.format(self.id)),
-                index=False)
+            if self.config.execution != "search_p":
+                self.result_df = pd.DataFrame(self.results)
+                self.result_df.to_csv(
+                    os.path.join(self.result_path, '{}.csv'.format(self.id)),
+                    index=False)
 
             if self.config.execution == "train_and_predict":
                 execution_end_time = (time.time() - execution_start_time)
@@ -508,17 +547,19 @@ class Detector:
         """
         Initiate processing for all channels.
         """
-        logger.info("Execution mode: {}\n".format(self.config.execution))
+        if self.config.execution !=  "find_hp":
+            logger.info("Execution mode: {}\n".format(self.config.execution))
         if self.config.execution == "search_p":
             # header for csv file
-            col_header = ["P", "Precision", "Recall", "Total True Positives", "Total False Positives", "Total False Negatives"]
+            col_header = ["P", "Precision", "Recall", "Total True Positives", "Total False Positives", "Total False Negatives",
+                          "Total True Negatives"]
 
             df = pd.DataFrame(columns=col_header)
 
             # creates the array of values for p
             # for p values tending to 1 recall tends to 0 and precision tends to 1
-            # then we limit the p values from 0.01 to 0.30
-            array = np.linspace(0.01, 0.30, 30).tolist()
+            # then we limit the p values from 0.01 to 0.35
+            array = np.linspace(0.01, 0.35, 35).tolist()
             formatted_array = [round(elem, 2) for elem in array]
 
             i=0
@@ -528,7 +569,8 @@ class Detector:
                 self.execute_detection()
 
                 row = [self.config.p, self.precision, self.recall, self.result_tracker['true_positives'],
-                       self.result_tracker['false_positives'], self.result_tracker['false_negatives']]
+                       self.result_tracker['false_positives'], self.result_tracker['false_negatives'],
+                       self.result_tracker['true_negatives']]
 
                 df.loc[i] = row
                 i += 1
@@ -536,7 +578,8 @@ class Detector:
                 self.result_tracker = {
                     'true_positives': 0,
                     'false_positives': 0,
-                    'false_negatives': 0
+                    'false_negatives': 0,
+                    'true_negatives': 0
                 }
             df.to_csv('./data/{}/p_values.csv'.format(self.id), sep=',')
 
@@ -551,8 +594,8 @@ class Detector:
             plotting_p(precision=precision, recall=recall, p=p, focus=False, run_id=self.id)
 
             #focus on best p values
-            precision_threshold = 0.70
-            recall_threshold = 0.70
+            precision_threshold = 0.75
+            recall_threshold = 0.80
             subsetx = sorted_df[(sorted_df['Precision'] >= precision_threshold) & (sorted_df['Recall'] >= recall_threshold)]
 
             if not subsetx.empty:
@@ -565,6 +608,11 @@ class Detector:
                            precision2=precision2, recall2=recall2, p2=p2)
             else:
                 logger.info("No values found with threshold recall: {} precision: {}".format(recall_threshold, precision_threshold))
+
+            #roc curve
+            auc = roc_curve(self.id)
+            logger.info("AUC score: {}".format(auc))
+
 
 
         elif self.config.execution == "find_hp":

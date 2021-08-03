@@ -7,17 +7,18 @@
 # predict: makes predictions using models already trained using use_id as project folder and performs anomaly detection
 # search_p: tries different values for p parameter, use use_id as project folder to load predictions
 # find_hp: starts hyperparameters search for ESN models
-execution: "search_p" #train, predict, train_and_predict, search_p
-use_id: "ESN_100Epochs_2021-07-28_17.34.52"
-load_hp: True # if true, during training loads hyperparameters found from the hp_search_id folder for ESN models
-
-
-model_architecture: "ESN" # neural network architecture LSTM, ESN
-name: "nolabel" # project name folder
+execution: "search_p" #train, predict, train_and_predict, search_p, find_hp
+use_id: "LSTM_baseline_2021-07-23_19.26.44"
+load_hp: True # if true, during training loads hyperparameters found from the hp_research_id folder for ESN models
 
 #hyperparameters search
 resume_hp_search: True # if true, it resumes the hyperparameters research in the hp_search_id project folder
 hp_research_id: "2021-07-27_12.50.38" # project folder for hyperparameters research
+
+
+model_architecture: "LSTM" # neural network architecture LSTM, ESN
+name: "lr" # project name folder
+
 
 save_graphs: True # if True it shows and saves the graphs for loss and validation loss
 
@@ -41,7 +42,7 @@ error_buffer: 100
 # LSTM, ESN parameters
 # ==================================
 loss_metric: 'mse'
-optimizer: 'nadam'
+optimizer: 'adam'
 validation_split: 0.2
 dropout: 0.3
 lstm_batch_size: 64
@@ -53,7 +54,7 @@ esn_epochs: 100
 
 # network architecture [<neurons in hidden layer>, <neurons in hidden layer>]
 # Size of input layer not listed - dependent on evr modules and types included (see 'evr_modules' and 'erv_types' above)
-layers: [80,80]
+layers: [80, 80]
 
 # Number of consequetive training iterations to allow without decreasing the val_loss by at least min_delta 
 patience: 10

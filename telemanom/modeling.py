@@ -156,8 +156,10 @@ class Model:
                     logger.info('radius: {}'.format(hp["radius"]))
                     logger.info('leaky: {}'.format(hp["leaky"]))
                     logger.info('connectivity_input: {}'.format(hp["connectivity_input"]))
+                    logger.info('learning_rate: {}'.format(hp["learning_rate"]))
                 except FileNotFoundError as e:
                     logger.info("No configuration file at {} using default hypeparameters".format(path))
+                    raise e
             else:
                 logger.info("default hp".format(self.config.model_architecture))
 
