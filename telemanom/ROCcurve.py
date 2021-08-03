@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-
 from sklearn.metrics import auc
+
 def plot_roc_curve(fpr, tpr, label=None):
     plt.plot(fpr, tpr, linewidth=2, label=label)
     plt.plot([0, 1], [0, 1], 'k--') # dashed diagonal
